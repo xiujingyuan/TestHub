@@ -1,4 +1,4 @@
-package com.qa;
+package com.jxq.reqres_website;
 
 import com.jxq.common.HttpBase;
 import com.jxq.douban.domain.MovieResponseVO;
@@ -26,5 +26,4 @@ public class MonthlyCall extends HttpBase {
         Call<MovieResponseVO> call = monthlyCall.getMonthly(timeKey);
         return call.execute();
     }
-
 }

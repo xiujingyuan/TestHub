@@ -7,6 +7,7 @@
     <suite-files>
         <suite-file path="search/SearchTags-TestSuite.xml"/>
         <suite-file path="get/GetApi-TestSuite.xml"/>
+        <suite-file path="post/PostApi-TestSuite.xml"/>
     </suite-files>
 
     <listeners>

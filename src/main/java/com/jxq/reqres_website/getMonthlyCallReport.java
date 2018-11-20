@@ -1,4 +1,4 @@
-package com.qa;
+package com.jxq.reqres_website;
 
 import com.jxq.douban.domain.MovieResponseVO;
 import retrofit2.Call;

@@ -2,7 +2,7 @@ package com.jxq.douban;
 
 import com.jxq.common.HttpBase;
 import com.jxq.douban.domain.MovieResponseVO;
-import com.qa.getMonthlyCallReport;
+import com.jxq.reqres_website.getMonthlyCallReport;
 import retrofit2.Call;
 import retrofit2.Response;
 

@@ -1,4 +1,4 @@
-package com.qa.restclient;
+package com.jxq.reqres_website.restclient;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;

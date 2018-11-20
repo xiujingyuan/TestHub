@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="get_api-get类API-测试集合" verbose="1" preserve-order="true">
+<suite name="Post_api-post类API-测试集合" verbose="1" preserve-order="true">
     <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"/>
     <parameter name="system.info" value="reporter.config.MySystemInfo"/>
 
-    <test name="Get类 接口" preserve-order="true">
+    <test name="Post类 接口" preserve-order="true">
         <classes>
-            <class name="com.qa.tests.GetApiTest"/>
+            <class name="com.qa.tests.CreateUserTest"/>
         </classes>
     </test>
 
