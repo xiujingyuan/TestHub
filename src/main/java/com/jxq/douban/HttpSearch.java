@@ -1,8 +1,8 @@
 package com.jxq.douban;
 
 import com.jxq.common.HttpBase;
-import com.jxq.douban.ISearch;
 import com.jxq.douban.domain.MovieResponseVO;
+import com.qa.getMonthlyCallReport;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -28,8 +28,8 @@ public class HttpSearch extends HttpBase {
         return call.execute();
     }
 
-    public Response<MovieResponseVO> getmonthly(String timeKey) throws IOException {
-        Call<MovieResponseVO> call = monthlyCall.getmonthly(timeKey);
+    public Response<MovieResponseVO> getMonthly(String timeKey) throws IOException {
+        Call<MovieResponseVO> call = monthlyCall.getMonthly(timeKey);
         return call.execute();
     }
 

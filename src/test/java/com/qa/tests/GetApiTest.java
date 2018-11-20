@@ -1,13 +1,11 @@
 package com.qa.tests;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jxq.douban.HttpSearch;
 import com.jxq.douban.domain.MovieResponseVO;
 import com.jxq.tools.JsonSchemaUtils;
+import com.qa.MonthlyCall;
 import com.qa.base.TestBase;
-import com.qa.restclient.RestClient;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.CloseableHttpResponse;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -26,10 +24,7 @@ import java.util.Properties;
 public class GetApiTest extends TestBase {
 
     private static Properties properties;
-    private static HttpSearch implSearch;
-//    String url;
-//    RestClient restClient;
-//    CloseableHttpResponse closeableHttpResponse;
+    private static MonthlyCall monthlyCall;
     private static String SCHEMA_PATH = "parameters/get/schema/MonthlyCallReport.json";
 
     @BeforeSuite
@@ -38,7 +33,7 @@ public class GetApiTest extends TestBase {
         properties = new Properties();
         properties.load(stream);
         String host = properties.getProperty("Test.host");
-        implSearch = new HttpSearch(host);
+        monthlyCall = new MonthlyCall(host);
         stream = this.getClass().getClassLoader().getResourceAsStream("parameters/get/MonthlyCallReportParams.properties");
         properties.load(stream);
         stream = this.getClass().getClassLoader().getResourceAsStream("");
@@ -49,7 +44,7 @@ public class GetApiTest extends TestBase {
     public void testcase1() throws IOException {
         String timeKey = properties.getProperty("testcase1.req.timeKey");
 
-        Response<MovieResponseVO> response = implSearch.getmonthly(timeKey);
+        Response<MovieResponseVO> response = monthlyCall.getMonthly(timeKey);
         MovieResponseVO body = response.body();
         Assert.assertNotNull(body, "response.body()");
 //        响应返回内容通过schema标准校验
@@ -60,12 +55,9 @@ public class GetApiTest extends TestBase {
 
     @Test(description = "判断断言状态码是不是200")
     public void testcase2() throws ClientProtocolException, IOException {
-//        restClient = new RestClient();
-//        closeableHttpResponse = restClient.get(url);
-
         //断言状态码是不是200
         String timeKey = properties.getProperty("testcase1.req.timeKey");
-        Response<MovieResponseVO> response = implSearch.getmonthly(timeKey);
+        Response<MovieResponseVO> response = monthlyCall.getMonthly(timeKey);
 
         int statusCode = response.code();
         Assert.assertEquals(statusCode, RESPNSE_STATUS_CODE_200, "response status code is 200");

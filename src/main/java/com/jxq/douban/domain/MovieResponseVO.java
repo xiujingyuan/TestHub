@@ -23,4 +23,8 @@ public class MovieResponseVO {
     public List<String> getMsg() {
         return msg;
     }
+
+    public void setMsg(List<String> msg) {
+        this.msg = msg;
+    }
 }

@@ -1,4 +1,4 @@
-package com.jxq.douban;
+package com.qa;
 
 import com.jxq.douban.domain.MovieResponseVO;
 import retrofit2.Call;
@@ -13,5 +13,5 @@ import retrofit2.http.Query;
  */
 public interface getMonthlyCallReport {
     @GET("api/genesysCallReport/monthly")
-    Call<MovieResponseVO> getmonthly(@Query("timeKey") String timeKey);
+    Call<MovieResponseVO> getMonthly(@Query("timeKey") String timeKey);
 }

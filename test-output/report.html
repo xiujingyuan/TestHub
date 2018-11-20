@@ -51,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>2018-11-19 22:17:19</span>
+                    <span class='label suite-start-time blue darken-3'>2018-11-20 18:00:48</span>
 				</a>
 			</li>
 			<li>
@@ -142,10 +142,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='4.348%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='7.692%'><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='95.652%'>44</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='92.308%'>24</span> others
 				</div>
 			</div>
 		</div>
@@ -162,23 +162,23 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>search_tags-搜索分类-测试集合</span>
-						<span class='test-time'>2018-11-19 22:17:19</span>
+						<span class='test-name'>get_api-get类API-测试集合</span>
+						<span class='test-time'>2018-11-20 18:00:48</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>2018-11-19 22:17:19</span>
-	<span class='label end-time'>2018-11-19 22:17:20</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+435ms</span>
+	<span class='label start-time'>2018-11-20 18:00:48</span>
+	<span class='label end-time'>2018-11-20 18:00:50</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+540ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
 				<li class='node level-1  pass' status='pass' test-id='2'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>搜索分类 接口</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-19 22:17:20</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+68ms</span>
+						<h5 class='node-name'>呼叫中心通时通次月报 接口</h5>
+						<span class="node-time label grey lighten-1 white-text">2018-11-20 18:00:50</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+64ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -194,7 +194,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -205,10 +205,10 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>testcase1</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-19 22:17:20</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+3ms</span>
+						<span class="node-time label grey lighten-1 white-text">2018-11-20 18:00:50</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+28ms</span>
 						<span class='test-status right pass'>pass</span>
-							<div class='node-desc'>电影首页。类别:type=movie source=index</div>
+							<div class='node-desc'>呼叫中心通时通次月报。参数:timeKey=201810</div>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -223,117 +223,67 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> --> GET https://movie.douban.com/j/search_tags?type=movie&source=index</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> --> GET http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--> --> END GET</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- 200 OK https://movie.douban.com/j/search_tags?type=movie&source=index (292ms)</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> <-- 200 http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810 (49ms)</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Date: Mon, 19 Nov 2018 14:17:20 GMT</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> Server: nginx</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Content-Type: application/json; charset=utf-8</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> Date: Tue, 20 Nov 2018 10:00:48 GMT</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> Content-Type: application/json;charset=UTF-8</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--> Transfer-Encoding: chunked</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--> Connection: keep-alive</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Keep-Alive: timeout=30</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> X-Application-Context: bi</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Xss-Protection: 1; mode=block</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Douban-Mobileapp: 0</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Expires: Sun, 1 Jan 2006 01:00:00 GMT</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Pragma: no-cache</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Cache-Control: must-revalidate, no-cache, private</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Set-Cookie: bid=XaSF_wxrZXw; Expires=Tue, 19-Nov-19 14:17:20 GMT; Domain=.douban.com; Path=/</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-DOUBAN-NEWBID: XaSF_wxrZXw</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-DAE-Node: anson47</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-DAE-App: movie</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Server: dae</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Content-Type-Options: nosniff</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> {"tags":["热门","最新","豆瓣高分","冷门佳片","华语","欧美","韩国","日本"]}</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> {"msg":"请求成功！","success":true}</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- END HTTP (94-byte body)</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> <-- END HTTP (40-byte body)</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -344,10 +294,10 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='4'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>testcase2</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-19 22:17:20</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+50ms</span>
+						<span class="node-time label grey lighten-1 white-text">2018-11-20 18:00:50</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+16ms</span>
 						<span class='test-status right pass'>pass</span>
-							<div class='node-desc'>Tv首页。类别:type=tv source=index</div>
+							<div class='node-desc'>判断断言状态码是不是200</div>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -362,117 +312,67 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> --> GET https://movie.douban.com/j/search_tags?type=tv&source=index</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> --> GET http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--> --> END GET</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- 200 OK https://movie.douban.com/j/search_tags?type=tv&source=index (36ms)</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> <-- 200 http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810 (11ms)</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Date: Mon, 19 Nov 2018 14:17:20 GMT</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> Server: nginx</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Content-Type: application/json; charset=utf-8</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> Date: Tue, 20 Nov 2018 10:00:49 GMT</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> Content-Type: application/json;charset=UTF-8</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--> Transfer-Encoding: chunked</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--> Connection: keep-alive</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Keep-Alive: timeout=30</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> X-Application-Context: bi</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Xss-Protection: 1; mode=block</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Douban-Mobileapp: 0</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Expires: Sun, 1 Jan 2006 01:00:00 GMT</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Pragma: no-cache</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Cache-Control: must-revalidate, no-cache, private</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Set-Cookie: bid=XUP3AxyuIV0; Expires=Tue, 19-Nov-19 14:17:20 GMT; Domain=.douban.com; Path=/</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-DOUBAN-NEWBID: XUP3AxyuIV0</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-DAE-Node: anson81</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-DAE-App: movie</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> Server: dae</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Content-Type-Options: nosniff</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>RetrofitLog--></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> {"tags":["热门","国产剧","综艺","美剧","日剧","韩剧","日本动画","纪录片"]}</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> {"msg":"请求成功！","success":true}</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- END HTTP (94-byte body)</td>
+													<td class='timestamp'>6:00:50 PM</td>
+													<td class='step-details'>RetrofitLog--> <-- END HTTP (40-byte body)</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:17:20 PM</td>
+													<td class='timestamp'>6:00:50 PM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -526,25 +426,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>46</div>
+					<div class='panel-lead'>26</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>2018-11-19 22:17:19</div>
+					<div class='panel-lead'>2018-11-20 18:00:48</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>2018-11-19 22:17:20</div>
+			 		<div class='panel-lead'>2018-11-20 18:00:50</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 1s+559ms</div>
+					<div class='panel-lead'>0h 0m 1s+669ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -558,11 +458,11 @@
 						</tr>
 							<tr>
 								<td>environment</td>
-								<td>dev</td>
+								<td>Debug</td>
 							</tr>
 							<tr>
 								<td>测试人员</td>
-								<td>xxx</td>
+								<td>袁修静</td>
 							</tr>
 					</table>
 				</div>
@@ -591,7 +491,7 @@
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 44,
+				infoChild: 24,
 				exceptionsChild: 0,
 				
 				passGrandChild: 0,
