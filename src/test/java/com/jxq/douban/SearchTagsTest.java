@@ -53,10 +53,13 @@ public class SearchTagsTest {
     public void testcase2() throws IOException {
         String type = properties.getProperty("testcase2.req.type");
         String source = properties.getProperty("testcase2.req.source");
+
         Response<MovieResponseVO> response = implSearch.searchTags(type, source);
         MovieResponseVO body = response.body();
         Assert.assertNotNull(body, "response.body()");
+//        响应返回内容想通过schema标准校验
         JsonSchemaUtils.assertResponseJsonSchema(SCHEMA_PATH, JSONObject.toJSONString(body));
+//        再Json化成对象
         Assert.assertNotNull(body.getTags(), "tags");
     }
 }

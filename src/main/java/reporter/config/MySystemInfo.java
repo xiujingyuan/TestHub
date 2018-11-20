@@ -22,7 +22,7 @@ public class MySystemInfo implements SystemInfo {
         try {
             properties.load(inputStream);
             systemInfo.put("environment", properties.getProperty("Environment"));
-            systemInfo.put("测试人员", "xxx");
+            systemInfo.put("测试人员", "袁修静");
         } catch (IOException e) {
             e.printStackTrace();
         }
