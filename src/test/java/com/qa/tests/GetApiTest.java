@@ -27,9 +27,9 @@ public class GetApiTest extends TestBase {
 
     private static Properties properties;
     private static HttpSearch implSearch;
-    String url;
-    RestClient restClient;
-    CloseableHttpResponse closeableHttpResponse;
+//    String url;
+//    RestClient restClient;
+//    CloseableHttpResponse closeableHttpResponse;
     private static String SCHEMA_PATH = "parameters/get/schema/MonthlyCallReport.json";
 
     @BeforeSuite
@@ -60,8 +60,8 @@ public class GetApiTest extends TestBase {
 
     @Test(description = "判断断言状态码是不是200")
     public void testcase2() throws ClientProtocolException, IOException {
-        restClient = new RestClient();
-        closeableHttpResponse = restClient.get(url);
+//        restClient = new RestClient();
+//        closeableHttpResponse = restClient.get(url);
 
         //断言状态码是不是200
         String timeKey = properties.getProperty("testcase1.req.timeKey");

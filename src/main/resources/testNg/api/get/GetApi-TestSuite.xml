@@ -1,13 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="接口测试集合" verbose="1" preserve-order="true">
+<suite name="get_api-get类API-测试集合" verbose="1" preserve-order="true">
     <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"/>
     <parameter name="system.info" value="reporter.config.MySystemInfo"/>
 
-    <suite-files>
-        <suite-file path="search/SearchTags-TestSuite.xml"/>
-        <suite-file path="get/GetApi-TestSuite.xml"/>
-    </suite-files>
+    <test name="呼叫中心通时通次月报 接口" preserve-order="true">
+        <classes>
+            <class name="com.qa.tests.GetApiTest"/>
+        </classes>
+    </test>
 
     <listeners>
         <listener class-name="reporter.Listener.MyExtentTestNgFormatter"/>
