@@ -2,7 +2,6 @@ package com.jxq.reqres_website;
 
 import com.jxq.common.HttpBase;
 import com.jxq.douban.domain.MovieResponseVO;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
 
