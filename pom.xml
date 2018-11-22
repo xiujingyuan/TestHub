@@ -76,7 +76,7 @@
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
-            <version>2.4.0</version>
+            <version>2.3.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson -->
         <dependency>
@@ -136,6 +136,7 @@
 
         <filters>
             <filter>src/main/filters/filter-${env}.properties</filter>
+            <!--<filter>src/main/filters/filter-dev.properties</filter>-->
             <!--环境过滤器的配置方式，回头需要在该路径下建立对应文件-->
         </filters>
         <plugins>

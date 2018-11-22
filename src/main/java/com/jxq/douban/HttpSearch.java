@@ -21,6 +21,7 @@ public class HttpSearch extends HttpBase {
     public HttpSearch(String host) {
         super(host);
         iSearch = super.create(ISearch.class);
+        monthlyCall = super.create(getMonthlyCallReport.class);
     }
 
     public Response<MovieResponseVO> searchTags(String type, String source) throws IOException {

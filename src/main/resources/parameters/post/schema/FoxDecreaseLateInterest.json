@@ -1,10 +1,4 @@
 {
-  "data": {
-    "period": 2,
-    "amount": 1,
-    "asset_item_no": "2018110164660631363"
-  },
-  "from_system": "Fox",
-  "type": "FoxDecreaseLateInterest",
-  "key": "f4e3c6ba-b99b-4944-9200-75bbd134c291"
+  "code": 0,
+  "message": "罚息减免成功"
 }

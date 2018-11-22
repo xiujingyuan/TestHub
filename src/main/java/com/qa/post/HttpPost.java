@@ -24,9 +24,9 @@ public class HttpPost extends HttpBase {
     }
 
     public Response<HttpModel> postDecreaseLateInterest(String asset_item_no, int period, int amount) throws IOException {
-        FoxDecreaseLateInterestReqBean foxDecreaseLateInterestReqBean =
+        FoxDecreaseLateInterestReqBean decreaseLateInterestReqBean =
                 FoxDecreaseLateInterestReqBean.getDeaultFoxDecreaseLateInterestReqBean(asset_item_no, period, amount);
-        Call<HttpModel> call = foxApi.postDecreaseLateInterest(foxDecreaseLateInterestReqBean);
+        Call<HttpModel> call = foxApi.postDecreaseLateInterest(decreaseLateInterestReqBean);
         return call.execute();
     }
 }

@@ -1,9 +1,7 @@
 package com.qa.bean.requestBean;
 
 import com.google.gson.annotations.SerializedName;
-import org.testng.Reporter;
-
-import java.util.Calendar;
+import com.qa.util.UUIDUtil;
 
 /**
  * Created by IntelliJ IDEA.
@@ -33,13 +31,10 @@ public class FoxDecreaseLateInterestReqBean {
     }
 
     public static FoxDecreaseLateInterestReqBean getDeaultFoxDecreaseLateInterestReqBean(String asset_item_no, int period, int amount) {
-        String key = String.valueOf(Calendar.getInstance().getTimeInMillis());
-
-        Reporter.log(key);
 
         FoxDecreaseLateInterestReqBean decreaseLateInterestReqBean = new FoxDecreaseLateInterestReqBean();
         decreaseLateInterestReqBean.setType("FoxDecreaseLateInterest");
-        decreaseLateInterestReqBean.setKey(key);
+        decreaseLateInterestReqBean.setKey("dsq" + UUIDUtil.getUUID());
         decreaseLateInterestReqBean.setFromSystem("Fox");
 
         DataBean dataBean = new DataBean();

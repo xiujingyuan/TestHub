@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import org.testng.Reporter;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -57,7 +58,8 @@ public class HttpBase {
         retrofit = new Retrofit.Builder()
                 .baseUrl(host)
                 .client(client.build())
-                .addConverterFactory(RespVoConverterFactory.create())
+//                .addConverterFactory(RespVoConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
 

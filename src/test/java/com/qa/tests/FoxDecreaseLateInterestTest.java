@@ -26,10 +26,6 @@ public class FoxDecreaseLateInterestTest extends TestBase {
     private static HttpPost implPost;
     private static String SCHEMA_PATH = "parameters/post/schema/FoxDecreaseLateInterest.json";
 
-    String asset_item_no = properties.getProperty("testcase1.req.asset_item_no");
-    int period = Integer.parseInt(properties.getProperty("testcase1.req.period"));
-    int amount = Integer.parseInt(properties.getProperty("testcase1.req.amount"));
-
     @BeforeSuite
     public void beforeSuite() throws IOException {
         InputStream stream = this.getClass().getClassLoader().getResourceAsStream("env.properties");
@@ -45,6 +41,10 @@ public class FoxDecreaseLateInterestTest extends TestBase {
 
     @Test(description = "罚息减免。")
     public void testcase1() throws IOException {
+        String asset_item_no = properties.getProperty("testcase1.req.asset_item_no");
+        int period = Integer.parseInt(properties.getProperty("testcase1.req.period"));
+        int amount = Integer.parseInt(properties.getProperty("testcase1.req.amount"));
+
         Response<HttpModel> response = implPost.postDecreaseLateInterest(asset_item_no, period, amount);
         HttpModel body = response.body();
         Assert.assertNotNull(body, "response.body()");
@@ -53,12 +53,6 @@ public class FoxDecreaseLateInterestTest extends TestBase {
 //        再Json化成对象
         Assert.assertNotNull(body.getCode(), "code");
         Assert.assertNotNull(body.getMessage(), "message");
-    }
-
-    @Test(description = "判断断言状态码是不是200")
-    public void testcase2() throws IOException {
-        //断言状态码是不是200
-        Response<HttpModel> response = implPost.postDecreaseLateInterest(asset_item_no, period, amount);
 
         int statusCode = response.code();
         Assert.assertEquals(statusCode, RESPNSE_STATUS_CODE_200, "response status code is 200");

@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * 自定义拦截器--超时拦截器
- * 验证响应时间超过100毫秒，则警告。
+ * 验证响应时间超过1000毫秒，则警告。
  * 也可以自定义添加拦截器
  *
  * @author jx
@@ -22,8 +22,9 @@ public class MyInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
         Response response = chain.proceed(request);
+
         long time = response.receivedResponseAtMillis() - response.sentRequestAtMillis();
-        if (time > 100) {
+        if (time > 1000) {
             MyReporter.report.log(Status.WARNING, MyReporter.getTestName() + " 接口耗时：" + time);
         }
         return response;
