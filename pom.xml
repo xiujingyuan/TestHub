@@ -151,7 +151,7 @@
                     <!--动态指定执行的xml文件。${project.basedir}项目目录，${xmlFileName}maven文件-->
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/target/classes/testNg/api/${xmlFileName}</suiteXmlFile>
-                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/get/GetApi-TestSuite.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/post/PostApi-TestSuite.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
