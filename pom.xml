@@ -153,6 +153,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/target/classes/testNg/api/${xmlFileName}</suiteXmlFile>
                         <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/post/PostApi-TestSuite.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/get/GetApi-TestSuite.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

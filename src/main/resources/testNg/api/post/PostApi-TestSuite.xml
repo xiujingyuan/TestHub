@@ -6,7 +6,6 @@
 
     <test name="Post类 接口" preserve-order="true">
         <classes>
-            <!--<class name="com.qa.tests.CreateUserTest"/>-->
             <class name="com.qa.tests.FoxDecreaseLateInterestTest"/>
         </classes>
     </test>

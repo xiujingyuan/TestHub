@@ -1,23 +1,4 @@
 {
-  "$id": "http://example.com/example.json",
-  "type": "object",
-  "properties": {
-    "tags": {
-      "$id": "/properties/msg",
-      "type": "array",
-      "items": {
-        "$id": "/properties/msg/items",
-        "type": "string",
-        "title": "The 0th Schema ",
-        "default": "",
-        "examples": {
-          "msg": "请求成功！",
-          "success": true
-        }
-      }
-    }
-  },
-  "required": [
-    "msg"
-  ]
+  "msg": "请求成功！",
+  "success": true
 }
