@@ -79,3 +79,4 @@ gradlew.bat
 unused.txt
 
 target/
+test-output/
