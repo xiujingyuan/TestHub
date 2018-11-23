@@ -154,7 +154,6 @@
                         <suiteXmlFile>${project.basedir}/target/classes/testNg/api/${xmlFileName}</suiteXmlFile>
                         <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/post/PostApi-TestSuite.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
-                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
             <plugin>
