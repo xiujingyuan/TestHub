@@ -135,8 +135,8 @@
         </resources>
 
         <filters>
-            <filter>src/main/filters/filter-${env}.properties</filter>
-            <!--<filter>src/main/filters/filter-dev.properties</filter>-->
+            <!--<filter>src/main/filters/filter-${env}.properties</filter>-->
+            <filter>src/main/filters/filter-dev.properties</filter>
             <!--环境过滤器的配置方式，回头需要在该路径下建立对应文件-->
         </filters>
         <plugins>
@@ -151,9 +151,10 @@
                     <encoding>UTF-8</encoding>
                     <!--动态指定执行的xml文件。${project.basedir}项目目录，${xmlFileName}maven文件-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/target/classes/testNg/api/${xmlFileName}</suiteXmlFile>
-                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/post/PostApi-TestSuite.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/${xmlFileName}</suiteXmlFile>-->
+                        <suiteXmlFile>${project.basedir}/target/classes/testNg/api/post/PostApi-TestSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
             <plugin>
