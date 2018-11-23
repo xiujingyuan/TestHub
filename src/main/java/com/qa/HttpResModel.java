@@ -6,7 +6,7 @@ package com.qa;
  * Date: 18/11/22
  * Time: 下午2:15
  */
-public class HttpModel<T> {
+public class HttpResModel<T> {
     /**
      * code : 0
      * message : 查询成功
@@ -43,7 +43,7 @@ public class HttpModel<T> {
 
     @Override
     public String toString() {
-        return "HttpModel{" +
+        return "HttpResModel{" +
                 "code='" + code + '\'' +
                 ", message='" + message + '\'' +
                 ", data=" + data +

@@ -1,7 +1,7 @@
 package com.jxq.tools;
 
 import com.alibaba.fastjson.JSONObject;
-import com.qa.HttpModel;
+import com.qa.HttpResModel;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
@@ -29,12 +29,11 @@ public class RespVoConverterFactory extends Converter.Factory {
         return new RespVoConverter();
     }
 
-    public class RespVoConverter implements Converter<ResponseBody, HttpModel> {
+    public class RespVoConverter implements Converter<ResponseBody, HttpResModel> {
         @Override
-        public HttpModel convert(ResponseBody value) throws IOException {
+        public HttpResModel convert(ResponseBody value) throws IOException {
             String temp = value.string();
-            return JSONObject.parseObject(temp, HttpModel.class);
+            return JSONObject.parseObject(temp, HttpResModel.class);
         }
     }
-
 }

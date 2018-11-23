@@ -3,7 +3,7 @@ package com.qa.tests;
 import com.alibaba.fastjson.JSONObject;
 import com.jxq.reqres_website.base.TestBase;
 import com.jxq.tools.JsonSchemaUtils;
-import com.qa.HttpModel;
+import com.qa.HttpResModel;
 import com.qa.post.HttpPost;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
@@ -45,14 +45,20 @@ public class FoxDecreaseLateInterestTest extends TestBase {
         int period = Integer.parseInt(properties.getProperty("testcase1.req.period"));
         int amount = Integer.parseInt(properties.getProperty("testcase1.req.amount"));
 
-        Response<HttpModel> response = implPost.postDecreaseLateInterest(asset_item_no, period, amount);
-        HttpModel body = response.body();
+        Response<HttpResModel> response = implPost.postDecreaseLateInterest(asset_item_no, period, amount);
+        HttpResModel body = response.body();
         Assert.assertNotNull(body, "response.body()");
 //        响应返回内容想通过schema标准校验
         JsonSchemaUtils.assertResponseJsonSchema(SCHEMA_PATH, JSONObject.toJSONString(body));
 //        再Json化成对象
         Assert.assertNotNull(body.getCode(), "code");
         Assert.assertNotNull(body.getMessage(), "message");
+
+//        Assert.assertEquals(body.getCode(),0);
+//        Assert.assertEquals(body.getMessage(),"罚息减免成功");
+
+        Assert.assertEquals(body.getCode(),1);
+        body.getMessage().contains("数据不完整，请修改，Rbiz返回数据格式有问题");
 
         int statusCode = response.code();
         Assert.assertEquals(statusCode, RESPNSE_STATUS_CODE_200, "response status code is 200");

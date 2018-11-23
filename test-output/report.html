@@ -51,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>2018-11-20 18:00:48</span>
+                    <span class='label suite-start-time blue darken-3'>2018-11-23 11:34:50</span>
 				</a>
 			</li>
 			<li>
@@ -127,7 +127,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -142,10 +142,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='7.692%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='5.882%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='92.308%'>24</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='94.118%'>16</span> others
 				</div>
 			</div>
 		</div>
@@ -162,23 +162,23 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>get_api-get类API-测试集合</span>
-						<span class='test-time'>2018-11-20 18:00:48</span>
+						<span class='test-name'>Post_api-post类API-测试集合</span>
+						<span class='test-time'>2018-11-23 11:34:50</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>2018-11-20 18:00:48</span>
-	<span class='label end-time'>2018-11-20 18:00:50</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+540ms</span>
+	<span class='label start-time'>2018-11-23 11:34:50</span>
+	<span class='label end-time'>2018-11-23 11:34:52</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+543ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
 				<li class='node level-1  pass' status='pass' test-id='2'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>呼叫中心通时通次月报 接口</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-20 18:00:50</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+64ms</span>
+						<h5 class='node-name'>Post类 接口</h5>
+						<span class="node-time label grey lighten-1 white-text">2018-11-23 11:34:52</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+31ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -194,7 +194,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -205,10 +205,10 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>testcase1</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-20 18:00:50</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+28ms</span>
+						<span class="node-time label grey lighten-1 white-text">2018-11-23 11:34:52</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+13ms</span>
 						<span class='test-status right pass'>pass</span>
-							<div class='node-desc'>呼叫中心通时通次月报。参数:timeKey=201810</div>
+							<div class='node-desc'>罚息减免。</div>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -223,156 +223,87 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> --> GET http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> --> POST http://api.biz1.biztest.so/fox/decrease-late-interest</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> --> END GET</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> Content-Type: application/json; charset=UTF-8</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- 200 http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810 (49ms)</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> Content-Length: 167</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Server: nginx</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Date: Tue, 20 Nov 2018 10:00:48 GMT</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Content-Type: application/json;charset=UTF-8</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Transfer-Encoding: chunked</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Connection: keep-alive</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Application-Context: bi</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>RetrofitLog--></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> {"msg":"请求成功！","success":true}</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> {"type":"FoxDecreaseLateInterest","key":"dsq509065c1bd014033b3f97e30aa7fcabe","from_system":"Fox","data":{"asset_item_no":"2018110164660631363","period":2,"amount":1}}</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- END HTTP (40-byte body)</td>
-												</tr>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>Passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='4'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>testcase2</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-20 18:00:50</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+16ms</span>
-						<span class='test-status right pass'>pass</span>
-							<div class='node-desc'>判断断言状态码是不是200</div>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> --> GET http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> --> END POST (167-byte body)</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> --> END GET</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> <-- 200 OK http://api.biz1.biztest.so/fox/decrease-late-interest (582ms)</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- 200 http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810 (11ms)</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>RetrofitLog--> Server: nginx</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Date: Tue, 20 Nov 2018 10:00:49 GMT</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> Date: Fri, 23 Nov 2018 03:34:58 GMT</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> Content-Type: application/json;charset=UTF-8</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> Content-Type: application/json; charset=UTF-8</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>RetrofitLog--> Transfer-Encoding: chunked</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>RetrofitLog--> Connection: keep-alive</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Application-Context: bi</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> X-Powered-By: PHP/5.6.31</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>RetrofitLog--></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> {"msg":"请求成功！","success":true}</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> {"code":1,"message":"数据不完整，请修改，Rbiz返回数据格式有问题:\"An invalid response was received from the upstream server\\n\"."}</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- END HTTP (40-byte body)</td>
+													<td class='timestamp'>11:34:52 AM</td>
+													<td class='step-details'>RetrofitLog--> <-- END HTTP (150-byte body)</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>6:00:50 PM</td>
+													<td class='timestamp'>11:34:52 AM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -420,31 +351,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>26</div>
+					<div class='panel-lead'>17</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>2018-11-20 18:00:48</div>
+					<div class='panel-lead'>2018-11-23 11:34:50</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>2018-11-20 18:00:50</div>
+			 		<div class='panel-lead'>2018-11-23 11:34:52</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 1s+669ms</div>
+					<div class='panel-lead'>0h 0m 2s+670ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -458,7 +389,7 @@
 						</tr>
 							<tr>
 								<td>environment</td>
-								<td>Debug</td>
+								<td>Dev</td>
 							</tr>
 							<tr>
 								<td>测试人员</td>
@@ -477,7 +408,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
+				passParent: 1,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -485,13 +416,13 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 2,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 24,
+				infoChild: 16,
 				exceptionsChild: 0,
 				
 				passGrandChild: 0,

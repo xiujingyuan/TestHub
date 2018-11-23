@@ -1,7 +1,7 @@
 package com.qa.post;
 
 import com.jxq.common.HttpBase;
-import com.qa.HttpModel;
+import com.qa.HttpResModel;
 import com.qa.api.FoxApi;
 import com.qa.bean.requestBean.FoxDecreaseLateInterestReqBean;
 import retrofit2.Call;
@@ -23,10 +23,10 @@ public class HttpPost extends HttpBase {
         foxApi = super.create(FoxApi.class);
     }
 
-    public Response<HttpModel> postDecreaseLateInterest(String asset_item_no, int period, int amount) throws IOException {
+    public Response<HttpResModel> postDecreaseLateInterest(String asset_item_no, int period, int amount) throws IOException {
         FoxDecreaseLateInterestReqBean decreaseLateInterestReqBean =
                 FoxDecreaseLateInterestReqBean.getDeaultFoxDecreaseLateInterestReqBean(asset_item_no, period, amount);
-        Call<HttpModel> call = foxApi.postDecreaseLateInterest(decreaseLateInterestReqBean);
+        Call<HttpResModel> call = foxApi.postDecreaseLateInterest(decreaseLateInterestReqBean);
         return call.execute();
     }
 }
