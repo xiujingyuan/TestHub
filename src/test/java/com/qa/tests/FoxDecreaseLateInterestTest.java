@@ -6,6 +6,7 @@ import com.jxq.tools.JsonSchemaUtils;
 import com.qa.HttpResModel;
 import com.qa.post.HttpPost;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import retrofit2.Response;
@@ -48,9 +49,9 @@ public class FoxDecreaseLateInterestTest extends TestBase {
         Response<HttpResModel> response = implPost.postDecreaseLateInterest(asset_item_no, period, amount);
         HttpResModel body = response.body();
         Assert.assertNotNull(body, "response.body()");
-//        响应返回内容想通过schema标准校验
+//        将需要验证的response 与 JsonSchema标准对象 进行比较
         JsonSchemaUtils.assertResponseJsonSchema(SCHEMA_PATH, JSONObject.toJSONString(body));
-//        再Json化成对象
+
         Assert.assertNotNull(body.getCode(), "code");
         Assert.assertNotNull(body.getMessage(), "message");
 
