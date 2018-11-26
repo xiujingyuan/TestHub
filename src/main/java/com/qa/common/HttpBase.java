@@ -57,7 +57,6 @@ public class HttpBase {
         retrofit = new Retrofit.Builder()
                 .baseUrl(host)
                 .client(client.build())
-//                .addConverterFactory(RespVoConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

@@ -22,6 +22,9 @@ public class MySystemInfo implements SystemInfo {
         try {
             properties.load(inputStream);
             systemInfo.put("environment", properties.getProperty("Environment"));
+            systemInfo.put("biz.host",properties.getProperty("biz.api.host"));
+            systemInfo.put("bi.host",properties.getProperty("bi.api.host"));
+            systemInfo.put("fox.host",properties.getProperty("fox.api.host"));
             systemInfo.put("测试人员", "袁修静");
         } catch (IOException e) {
             e.printStackTrace();

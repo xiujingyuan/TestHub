@@ -27,4 +27,10 @@ public class HttpGet extends HttpBase {
         Call<HttpResModel> call = foxApi.getMonthly(timeKey);
         return call.execute();
     }
+
+    //    获取呼叫中心通时通次日报
+    public Response<HttpResModel> getDaily(String timeKey) throws IOException {
+        Call<HttpResModel> call = foxApi.getDaily(timeKey);
+        return call.execute();
+    }
 }

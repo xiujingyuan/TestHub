@@ -1,6 +1,7 @@
 package com.qa.api;
 
 import com.qa.HttpResModel;
+import com.qa.bean.requestBean.AssetSyncReqBean;
 import com.qa.bean.requestBean.FoxDecreaseLateInterestReqBean;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -17,6 +18,7 @@ import retrofit2.http.Query;
 public interface FoxApi {
     /**
      * 罚息减免
+     *
      * @param body
      * @return
      */
@@ -24,10 +26,31 @@ public interface FoxApi {
     Call<HttpResModel> postDecreaseLateInterest(@Body FoxDecreaseLateInterestReqBean body);
 
     /**
-     * 获取呼叫中心通时通次月报
+     * 呼叫中心通时通次月报
+     *
      * @param timeKey
      * @return
      */
     @GET("api/genesysCallReport/monthly")
     Call<HttpResModel> getMonthly(@Query("timeKey") String timeKey);
+
+    /**
+     * 呼叫中心通时通次日报
+     *
+     * @param timeKey
+     * @return
+     */
+    @GET("api/genesysCallReport/daily")
+    Call<HttpResModel> getDaily(@Query("timeKey") String timeKey);
+
+    /**
+     * 资产同步（FOX主动从BIZ拉取）
+     *
+     * @param assetSyncReqBean
+     * @return
+     */
+    @POST("assetsync/assetsync/sync")
+    Call<HttpResModel> postAssetSync(@Body AssetSyncReqBean assetSyncReqBean);
+
+
 }

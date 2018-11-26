@@ -1,5 +1,7 @@
 package com.qa;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by IntelliJ IDEA.
  * User: yuanxiujing
@@ -16,6 +18,15 @@ public class HttpResModel<T> {
     private int code;
     private String message;
     private T data;
+    /**
+     * msg : 请求成功！
+     * success : true
+     */
+
+    @SerializedName("msg")
+    private String msg;
+    @SerializedName("success")
+    private boolean success;
 
     public int getCode() {
         return code;
@@ -48,5 +59,21 @@ public class HttpResModel<T> {
                 ", message='" + message + '\'' +
                 ", data=" + data +
                 '}';
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 }
