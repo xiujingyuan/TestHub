@@ -1,4 +1,4 @@
-package com.jxq.reqres_website.base;
+package com.qa.common;
 
 /**
  * Created by IntelliJ IDEA.

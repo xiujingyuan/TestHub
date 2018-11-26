@@ -1,6 +1,6 @@
 package com.qa.post;
 
-import com.jxq.common.HttpBase;
+import com.qa.common.HttpBase;
 import com.qa.HttpResModel;
 import com.qa.api.FoxApi;
 import com.qa.bean.requestBean.FoxDecreaseLateInterestReqBean;
@@ -23,6 +23,7 @@ public class HttpPost extends HttpBase {
         foxApi = super.create(FoxApi.class);
     }
 
+//    罚息减免
     public Response<HttpResModel> postDecreaseLateInterest(String asset_item_no, int period, int amount) throws IOException {
         FoxDecreaseLateInterestReqBean decreaseLateInterestReqBean =
                 FoxDecreaseLateInterestReqBean.getDeaultFoxDecreaseLateInterestReqBean(asset_item_no, period, amount);

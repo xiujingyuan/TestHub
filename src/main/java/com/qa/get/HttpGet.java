@@ -1,8 +1,8 @@
 package com.qa.get;
 
-import com.jxq.common.HttpBase;
-import com.jxq.reqres_website.getMonthlyCallReport;
+import com.qa.common.HttpBase;
 import com.qa.HttpResModel;
+import com.qa.api.FoxApi;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -15,15 +15,16 @@ import java.io.IOException;
  * Time: 下午2:40
  */
 public class HttpGet extends HttpBase {
-    private getMonthlyCallReport monthlyCall;
+    private FoxApi foxApi;
 
     public HttpGet(String host) {
         super(host);
-        monthlyCall = super.create(getMonthlyCallReport.class);
+        foxApi = super.create(FoxApi.class);
     }
 
+//    获取呼叫中心通时通次月报
     public Response<HttpResModel> getMonthly(String timeKey) throws IOException {
-        Call<HttpResModel> call = monthlyCall.getMonthly(timeKey);
+        Call<HttpResModel> call = foxApi.getMonthly(timeKey);
         return call.execute();
     }
 }

@@ -1,6 +1,5 @@
-package com.jxq.common;
+package com.qa.common;
 
-import com.jxq.tools.RespVoConverterFactory;
 import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;

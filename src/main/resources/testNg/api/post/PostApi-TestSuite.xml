@@ -6,7 +6,7 @@
 
     <test name="Post类 接口" preserve-order="true">
         <classes>
-            <class name="com.qa.tests.FoxDecreaseLateInterestTest"/>
+            <class name="com.qa.tests.PostApiTest"/>
         </classes>
     </test>
 

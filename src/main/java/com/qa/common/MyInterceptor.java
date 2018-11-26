@@ -1,4 +1,4 @@
-package com.jxq.common;
+package com.qa.common;
 
 import com.aventstack.extentreports.Status;
 import okhttp3.Interceptor;
