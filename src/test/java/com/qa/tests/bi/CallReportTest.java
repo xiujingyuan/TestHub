@@ -1,4 +1,4 @@
-package com.qa.tests;
+package com.qa.tests.bi;
 
 import com.alibaba.fastjson.JSONObject;
 import com.qa.HttpResModel;
@@ -19,9 +19,9 @@ import java.util.Properties;
  * User: yuanxiujing
  * Date: 18/11/20
  * Time: 下午3:30
- * GET类testcase
+ * BI GET类testcase
  */
-public class GetApiTest extends TestBase {
+public class CallReportTest extends TestBase {
 
     private static Properties properties;
     private static HttpGet implGet;

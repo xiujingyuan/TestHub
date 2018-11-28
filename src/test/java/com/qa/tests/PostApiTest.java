@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-;
 
 /**
  * Created by IntelliJ IDEA.
@@ -58,8 +57,8 @@ public class PostApiTest extends TestBase {
         Assert.assertNotNull(body.getCode(), "code");
         Assert.assertNotNull(body.getMessage(), "message");
 
-        Assert.assertEquals(body.getCode(),0);
-        Assert.assertEquals(body.getMessage(),"罚息减免成功");
+        Assert.assertEquals(body.getCode(), 0);
+        Assert.assertEquals(body.getMessage(), "罚息减免成功");
 
 //        Assert.assertEquals(body.getCode(), 1);
 //        body.getMessage().contains("数据不完整，请修改，Rbiz返回数据格式有问题");

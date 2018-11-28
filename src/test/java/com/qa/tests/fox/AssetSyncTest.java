@@ -1,4 +1,4 @@
-package com.qa.tests;
+package com.qa.tests.fox;
 
 import com.alibaba.fastjson.JSONObject;
 import com.qa.HttpResModel;
@@ -19,8 +19,9 @@ import java.util.Properties;
  * User: yuanxiujing
  * Date: 18/11/26
  * Time: 下午8:16
+ * 资产同步 fox从BIZ主动拉取
  */
-public class FoxPostApiTest extends TestBase {
+public class AssetSyncTest extends TestBase {
     private static Properties properties;
     private static HttpPost implPost;
     private static String SCHEMA_PATH = "parameters/post/schema/AssetSync.json";

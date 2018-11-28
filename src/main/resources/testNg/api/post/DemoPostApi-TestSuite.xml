@@ -1,14 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="接口测试集合" verbose="1" preserve-order="true">
+<suite name="Demo_Post_api-post类API-测试集合" verbose="1" preserve-order="true">
     <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"/>
     <parameter name="system.info" value="reporter.config.MySystemInfo"/>
 
-    <suite-files>
-        <suite-file path="get/GetApi-TestSuite.xml"/>
-        <suite-file path="post/FoxPostApi-TestSuite.xml"/>
-        <suite-file path="post/DemoPostApi-TestSuite.xml"/>
-    </suite-files>
+    <test name="Demo_Post类 接口" preserve-order="true">
+        <classes>
+            <class name="com.qa.tests.PostApiTest"/>
+        </classes>
+    </test>
 
     <listeners>
         <listener class-name="reporter.Listener.MyExtentTestNgFormatter"/>

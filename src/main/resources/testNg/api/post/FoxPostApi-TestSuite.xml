@@ -1,13 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Post_api-post类API-测试集合" verbose="1" preserve-order="true">
+<suite name="Fox_Post_api-post类API-测试集合" verbose="1" preserve-order="true">
     <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"/>
     <parameter name="system.info" value="reporter.config.MySystemInfo"/>
 
-    <test name="Post类 接口" preserve-order="true">
+    <test name="Fox_Post类 接口" preserve-order="true">
         <classes>
-            <class name="com.qa.tests.PostApiTest"/>
-            <class name="com.qa.tests.FoxPostApiTest"/>
+            <class name="com.qa.tests.fox.AssetSyncTest"/>
         </classes>
     </test>
 
