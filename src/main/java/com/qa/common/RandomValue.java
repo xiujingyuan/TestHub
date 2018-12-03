@@ -62,7 +62,7 @@ public class RandomValue {
     public String getChineseName() {
         int index = getNum(0, firstName.length() - 1);
         String first = firstName.substring(index, index + 1);
-        int length = sex.length();
+        int length = str.length();
 
         index = getNum(0, length - 1);
         String second = str.substring(index, index + 1);
