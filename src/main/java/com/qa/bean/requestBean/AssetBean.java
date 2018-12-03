@@ -1,6 +1,7 @@
 package com.qa.bean.requestBean;
 
 import com.google.gson.annotations.SerializedName;
+import com.qa.common.RandomValue;
 import com.qa.common.getBeforeDate;
 
 import java.util.Date;
@@ -111,9 +112,112 @@ public class AssetBean {
     private String assetProductName;
     @SerializedName("asset_actual_grant_at")
     private String assetActualGrantAt;
+    @SerializedName("asset_owner")
+    private String assetOwner;
 
-    public static AssetBean getDeault6MonthsAssetBean(int overdue_days) {
+    public static AssetBean get1MonthAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
+        RandomValue randomValue = new RandomValue();
+        String asset_item_no = "combo_order2018" + (new Date().getTime());
+
+        getBeforeDate n = new getBeforeDate();
+
+        String asset_sign_at = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_grant_at = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_actual_grant_at = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_due_at = n.getBeforeDate(overdue_days);
+
+        asset.setAssetItemNumber(asset_item_no);
+        asset.setAssetFromSystem("dsq");
+        asset.setAssetFromSystemName("贷上钱");
+        asset.setAssetType("现金贷");
+        asset.setAssetSubType("multiple");
+        asset.setAssetName("期缴-趸交第三单");
+        asset.setAssetSignAt(asset_sign_at + " 23:55:45");
+        asset.setAssetGrantAt(asset_grant_at + " 23:55:45");
+        asset.setAssetDueAt(asset_due_at + " 00:00:00");
+        asset.setAssetInterestAmount(0);
+        asset.setAssetRepaidInterestAmount(0);
+        asset.setAssetPrincipalAmount(62500);
+        asset.setAssetRepaidPrincipalAmount(0);
+        asset.setAssetPenaltyAmount(12500);
+        asset.setAssetRepaidPenaltyAmount(0);
+        asset.setAssetDecreasePenaltyAmount(0);
+        asset.setAssetFeeAmount(0);
+        asset.setAssetRepaidFeeAmount(0);
+
+        asset.setAssetChannel("Paydayloan");
+        asset.setAssetCityCode(370400);
+        asset.setAssetStatus("repay");
+        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetRepaidAmount(0);
+        asset.setAssetPeriodType(randomValue.getPeriodType());
+        asset.setAssetPeriodCount(randomValue.getPeriodCount());
+        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetRefOrderNo("");
+        asset.setAssetRefOrderType("game_combo");
+        asset.setAssetRiskLevel("7");
+        asset.setAssetSubOrderType("consumer");
+        asset.setAssetProductName("清风钱包");
+        asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
+        asset.setAssetOwner("KN");
+
+        return asset;
+    }
+
+    public static AssetBean get3MonthsAssetBean(int overdue_days) {
+        AssetBean asset = new AssetBean();
+        RandomValue randomValue = new RandomValue();
+        String asset_item_no = "combo_order2018" + (new Date().getTime());
+
+        getBeforeDate n = new getBeforeDate();
+
+        String asset_sign_at = n.getBeforeDate(overdue_days + 30 * 2);
+        String asset_grant_at = n.getBeforeDate(overdue_days + 30 * 2);
+        String asset_actual_grant_at = n.getBeforeDate(overdue_days + 30 * 2);
+        String asset_due_at = n.getBeforeDate(overdue_days - 30 * 1);
+
+        asset.setAssetItemNumber(asset_item_no);
+        asset.setAssetFromSystem("dsq");
+        asset.setAssetFromSystemName("贷上钱");
+        asset.setAssetType("现金贷");
+        asset.setAssetSubType("multiple");
+        asset.setAssetName("期缴-趸交第三单");
+        asset.setAssetSignAt(asset_sign_at + " 23:55:45");
+        asset.setAssetGrantAt(asset_grant_at + " 23:55:45");
+        asset.setAssetDueAt(asset_due_at + " 00:00:00");
+        asset.setAssetInterestAmount(0);
+        asset.setAssetRepaidInterestAmount(0);
+        asset.setAssetPrincipalAmount(80000);
+        asset.setAssetRepaidPrincipalAmount(26667);
+        asset.setAssetPenaltyAmount(1332);
+        asset.setAssetRepaidPenaltyAmount(666);
+        asset.setAssetDecreasePenaltyAmount(0);
+        asset.setAssetFeeAmount(0);
+        asset.setAssetRepaidFeeAmount(0);
+
+        asset.setAssetChannel("Paydayloan");
+        asset.setAssetCityCode(371200);
+        asset.setAssetStatus("repay");
+        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetRepaidAmount(27333);
+        asset.setAssetPeriodType(randomValue.getPeriodType());
+        asset.setAssetPeriodCount(randomValue.getPeriodCount());
+        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetRefOrderNo("");
+        asset.setAssetRefOrderType("game_combo");
+        asset.setAssetRiskLevel("1");
+        asset.setAssetSubOrderType("consumer");
+        asset.setAssetProductName("元宝钱包");
+        asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
+        asset.setAssetOwner("KN");
+
+        return asset;
+    }
+
+    public static AssetBean get6MonthsAssetBean(int overdue_days) {
+        AssetBean asset = new AssetBean();
+        RandomValue randomValue = new RandomValue();
         String asset_item_no = "2018" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
@@ -147,19 +251,169 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("hengfeng");
         asset.setAssetRepaidAmount(0);
-        asset.setAssetPeriodType("month");
-        asset.setAssetPeriodCount(6);
-        asset.setAssetPeriodDays(0);
+        asset.setAssetPeriodType(randomValue.getPeriodType());
+        asset.setAssetPeriodCount(randomValue.getPeriodCount());
+        asset.setAssetPeriodDays(randomValue.getPeriodDays());
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("game_combo");
         asset.setAssetRiskLevel("7");
         asset.setAssetSubOrderType("consumer");
         asset.setAssetProductName("清风钱包");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
+        asset.setAssetOwner("KN");
 
         return asset;
     }
 
+    public static AssetBean get7DaysAssetBean(int overdue_days) {
+        AssetBean asset = new AssetBean();
+        RandomValue randomValue = new RandomValue();
+        String asset_item_no = "M2018" + (new Date().getTime());
+
+        getBeforeDate n = new getBeforeDate();
+
+        String asset_sign_at = n.getBeforeDate(overdue_days + 7 * 1);
+        String asset_grant_at = n.getBeforeDate(overdue_days + 7 * 1);
+        String asset_actual_grant_at = n.getBeforeDate(overdue_days + 7 * 1);
+        String asset_due_at = n.getBeforeDate(overdue_days);
+
+        asset.setAssetItemNumber(asset_item_no);
+        asset.setAssetFromSystem("dsq");
+        asset.setAssetFromSystemName("贷上钱");
+        asset.setAssetType("现金贷");
+        asset.setAssetSubType("multiple");
+        asset.setAssetName(asset_item_no);
+        asset.setAssetSignAt(asset_sign_at + " 23:55:45");
+        asset.setAssetGrantAt(asset_grant_at + " 23:55:45");
+        asset.setAssetDueAt(asset_due_at + " 00:00:00");
+        asset.setAssetInterestAmount(0);
+        asset.setAssetRepaidInterestAmount(0);
+        asset.setAssetPrincipalAmount(40000);
+        asset.setAssetRepaidPrincipalAmount(0);
+        asset.setAssetPenaltyAmount(0);
+        asset.setAssetRepaidPenaltyAmount(0);
+        asset.setAssetDecreasePenaltyAmount(0);
+        asset.setAssetFeeAmount(0);
+        asset.setAssetRepaidFeeAmount(0);
+
+        asset.setAssetChannel("Paydayloan");
+        asset.setAssetCityCode(441900);
+        asset.setAssetStatus("repay");
+        asset.setAssetLoanChannel("noloan");
+        asset.setAssetRepaidAmount(0);
+        asset.setAssetPeriodType(randomValue.getPeriodType());
+        asset.setAssetPeriodCount(randomValue.getPeriodCount());
+        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetRefOrderNo("");
+        asset.setAssetRefOrderType("stb_bill_split");
+        asset.setAssetRiskLevel("7");
+        asset.setAssetSubOrderType("");
+        asset.setAssetProductName("你来借");
+        asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
+        asset.setAssetOwner("STB_NILAIJIE");
+
+        return asset;
+    }
+
+    public static AssetBean get14DaysAssetBean(int overdue_days) {
+        AssetBean asset = new AssetBean();
+        RandomValue randomValue = new RandomValue();
+        String asset_item_no = "2018" + (new Date().getTime());
+
+        getBeforeDate n = new getBeforeDate();
+
+        String asset_sign_at = n.getBeforeDate(overdue_days + 14 * 1);
+        String asset_grant_at = n.getBeforeDate(overdue_days + 14 * 1);
+        String asset_actual_grant_at = n.getBeforeDate(overdue_days + 14 * 1);
+        String asset_due_at = n.getBeforeDate(overdue_days);
+
+        asset.setAssetItemNumber(asset_item_no);
+        asset.setAssetFromSystem("dsq");
+        asset.setAssetFromSystemName("贷上钱");
+        asset.setAssetType("现金贷");
+        asset.setAssetSubType("multiple");
+        asset.setAssetName(asset_item_no);
+        asset.setAssetSignAt(asset_sign_at + " 23:55:45");
+        asset.setAssetGrantAt(asset_grant_at + " 23:55:45");
+        asset.setAssetDueAt(asset_due_at + " 00:00:00");
+        asset.setAssetInterestAmount(778);
+        asset.setAssetRepaidInterestAmount(0);
+        asset.setAssetPrincipalAmount(200000);
+        asset.setAssetRepaidPrincipalAmount(0);
+        asset.setAssetPenaltyAmount(266);
+        asset.setAssetRepaidPenaltyAmount(0);
+        asset.setAssetDecreasePenaltyAmount(0);
+        asset.setAssetFeeAmount(2022);
+        asset.setAssetRepaidFeeAmount(0);
+
+        asset.setAssetChannel("Paydayloan");
+        asset.setAssetCityCode(320900);
+        asset.setAssetStatus("repay");
+        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetRepaidAmount(0);
+        asset.setAssetPeriodType(randomValue.getPeriodType());
+        asset.setAssetPeriodCount(randomValue.getPeriodCount());
+        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetRefOrderNo("");
+        asset.setAssetRefOrderType("game_bill");
+        asset.setAssetRiskLevel("8");
+        asset.setAssetSubOrderType("");
+        asset.setAssetProductName("蜜蜂借款");
+        asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
+        asset.setAssetOwner("KN");
+
+        return asset;
+    }
+
+    public static AssetBean get30DaysAssetBean(int overdue_days) {
+        AssetBean asset = new AssetBean();
+        RandomValue randomValue = new RandomValue();
+        String asset_item_no = "M2018" + (new Date().getTime());
+
+        getBeforeDate n = new getBeforeDate();
+
+        String asset_sign_at = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_grant_at = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_actual_grant_at = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_due_at = n.getBeforeDate(overdue_days);
+
+        asset.setAssetItemNumber(asset_item_no);
+        asset.setAssetFromSystem("dsq");
+        asset.setAssetFromSystemName("贷上钱");
+        asset.setAssetType("现金贷");
+        asset.setAssetSubType("multiple");
+        asset.setAssetName(asset_item_no);
+        asset.setAssetSignAt(asset_sign_at + " 23:55:45");
+        asset.setAssetGrantAt(asset_grant_at + " 23:55:45");
+        asset.setAssetDueAt(asset_due_at + " 00:00:00");
+        asset.setAssetInterestAmount(917);
+        asset.setAssetRepaidInterestAmount(0);
+        asset.setAssetPrincipalAmount(200000);
+        asset.setAssetRepaidPrincipalAmount(0);
+        asset.setAssetPenaltyAmount(266);
+        asset.setAssetRepaidPenaltyAmount(0);
+        asset.setAssetDecreasePenaltyAmount(0);
+        asset.setAssetFeeAmount(5083);
+        asset.setAssetRepaidFeeAmount(0);
+
+        asset.setAssetChannel("Paydayloan");
+        asset.setAssetCityCode(441800);
+        asset.setAssetStatus("repay");
+        asset.setAssetLoanChannel("manaowan");
+        asset.setAssetRepaidAmount(0);
+        asset.setAssetPeriodType(randomValue.getPeriodType());
+        asset.setAssetPeriodCount(randomValue.getPeriodCount());
+        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetRefOrderNo("");
+        asset.setAssetRefOrderType("game_bill");
+        asset.setAssetRiskLevel("99");
+        asset.setAssetSubOrderType("");
+        asset.setAssetProductName("清风钱包");
+        asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
+        asset.setAssetOwner("KN");
+
+        return asset;
+    }
 
     public String getAssetItemNumber() {
         return assetItemNumber;
@@ -415,5 +669,13 @@ public class AssetBean {
 
     public void setAssetActualGrantAt(String assetActualGrantAt) {
         this.assetActualGrantAt = assetActualGrantAt;
+    }
+
+    public String getAssetOwner() {
+        return assetOwner;
+    }
+
+    public void setAssetOwner(String assetOwner) {
+        this.assetOwner = assetOwner;
     }
 }

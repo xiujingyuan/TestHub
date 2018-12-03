@@ -44,7 +44,114 @@ public class AssetTransactionsBean {
     @SerializedName("asset_transaction_repaid_amount")
     private int assetTransactionRepaidAmount;
 
-    public static List<AssetTransactionsBean> getDefaultAssetTransactions(int overdue_days) {
+    public static List<AssetTransactionsBean> get1MonthAssetTransactions(int overdue_days) {
+        getBeforeDate n = new getBeforeDate();
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 0);
+        String now_date = n.getBeforeDate(0);
+
+        List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();
+
+        AssetTransactionsBean transactionsBean1 = new AssetTransactionsBean();
+        transactionsBean1.setAssetTransactionType("repayprincipal");
+        transactionsBean1.setAssetTransactionAmount(62500);
+        transactionsBean1.setAssetTransactionStatus("unfinish");
+        transactionsBean1.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean1.setAssetTransactionFinishAt("");
+        transactionsBean1.setAssetTransactionPeriod(1);
+        transactionsBean1.setAssetTransactionRemark("");
+        transactionsBean1.setAssetTransactionDecreaseAmount(0);
+        transactionsBean1.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean2 = new AssetTransactionsBean();
+        transactionsBean2.setAssetTransactionType("repaylateinterest");
+        transactionsBean2.setAssetTransactionAmount(12500);
+        transactionsBean2.setAssetTransactionStatus("unfinish");
+        transactionsBean2.setAssetTransactionExpectFinishTime(now_date + " 00:00:00");
+        transactionsBean2.setAssetTransactionFinishAt("");
+        transactionsBean2.setAssetTransactionPeriod(1);
+        transactionsBean2.setAssetTransactionRemark("");
+        transactionsBean2.setAssetTransactionDecreaseAmount(0);
+        transactionsBean2.setAssetTransactionRepaidAmount(0);
+
+        transactions.add(transactionsBean1);
+        transactions.add(transactionsBean2);
+
+        return transactions;
+    }
+
+    public static List<AssetTransactionsBean> get3MonthsAssetTransactions(int overdue_days) {
+        getBeforeDate n = new getBeforeDate();
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 1);
+        String asset_transaction_expect_finish_time2 = n.getBeforeDate(overdue_days + 30 * 0);
+        String asset_transaction_expect_finish_time3 = n.getBeforeDate(overdue_days - 30 * 1);
+
+        List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();
+
+        AssetTransactionsBean transactionsBean1 = new AssetTransactionsBean();
+        transactionsBean1.setAssetTransactionType("repayprincipal");
+        transactionsBean1.setAssetTransactionAmount(26667);
+        transactionsBean1.setAssetTransactionStatus("finish");
+        transactionsBean1.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean1.setAssetTransactionFinishAt("2018-10-30 06:24:45");
+        transactionsBean1.setAssetTransactionPeriod(1);
+        transactionsBean1.setAssetTransactionRemark("");
+        transactionsBean1.setAssetTransactionDecreaseAmount(0);
+        transactionsBean1.setAssetTransactionRepaidAmount(26667);
+
+        AssetTransactionsBean transactionsBean2 = new AssetTransactionsBean();
+        transactionsBean2.setAssetTransactionType("repaylateinterest");
+        transactionsBean2.setAssetTransactionAmount(666);
+        transactionsBean2.setAssetTransactionStatus("finish");
+        transactionsBean2.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean2.setAssetTransactionFinishAt("2018-10-30 06:24:45");
+        transactionsBean2.setAssetTransactionPeriod(1);
+        transactionsBean2.setAssetTransactionRemark("");
+        transactionsBean2.setAssetTransactionDecreaseAmount(0);
+        transactionsBean2.setAssetTransactionRepaidAmount(666);
+
+        AssetTransactionsBean transactionsBean3 = new AssetTransactionsBean();
+        transactionsBean3.setAssetTransactionType("repaylateinterest");
+        transactionsBean3.setAssetTransactionAmount(666);
+        transactionsBean3.setAssetTransactionStatus("unfinish");
+        transactionsBean3.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time2 + " 00:00:00");
+        transactionsBean3.setAssetTransactionFinishAt("");
+        transactionsBean3.setAssetTransactionPeriod(2);
+        transactionsBean3.setAssetTransactionRemark("");
+        transactionsBean3.setAssetTransactionDecreaseAmount(0);
+        transactionsBean3.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean4 = new AssetTransactionsBean();
+        transactionsBean4.setAssetTransactionType("repayprincipal");
+        transactionsBean4.setAssetTransactionAmount(26667);
+        transactionsBean4.setAssetTransactionStatus("unfinish");
+        transactionsBean4.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time2 + " 00:00:00");
+        transactionsBean4.setAssetTransactionFinishAt("");
+        transactionsBean4.setAssetTransactionPeriod(2);
+        transactionsBean4.setAssetTransactionRemark("");
+        transactionsBean4.setAssetTransactionDecreaseAmount(0);
+        transactionsBean4.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean5 = new AssetTransactionsBean();
+        transactionsBean5.setAssetTransactionType("repayprincipal");
+        transactionsBean5.setAssetTransactionAmount(26666);
+        transactionsBean5.setAssetTransactionStatus("unfinish");
+        transactionsBean5.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time3 + " 00:00:00");
+        transactionsBean5.setAssetTransactionFinishAt("");
+        transactionsBean5.setAssetTransactionPeriod(3);
+        transactionsBean5.setAssetTransactionRemark("");
+        transactionsBean5.setAssetTransactionDecreaseAmount(0);
+        transactionsBean5.setAssetTransactionRepaidAmount(0);
+
+        transactions.add(transactionsBean1);
+        transactions.add(transactionsBean2);
+        transactions.add(transactionsBean3);
+        transactions.add(transactionsBean4);
+        transactions.add(transactionsBean5);
+
+        return transactions;
+    }
+
+    public static List<AssetTransactionsBean> get6MonthsAssetTransactions(int overdue_days) {
         getBeforeDate n = new getBeforeDate();
         String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 5);
         String asset_transaction_expect_finish_time2 = n.getBeforeDate(overdue_days + 30 * 4);
@@ -283,6 +390,146 @@ public class AssetTransactionsBean {
         transactions.add(transactionsBean17);
         transactions.add(transactionsBean18);
         transactions.add(transactionsBean19);
+
+        return transactions;
+    }
+
+    public static List<AssetTransactionsBean> get7DaysAssetTransactions(int overdue_days) {
+        getBeforeDate n = new getBeforeDate();
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 0);
+
+        List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();
+
+        AssetTransactionsBean transactionsBean1 = new AssetTransactionsBean();
+        transactionsBean1.setAssetTransactionType("repayprincipal");
+        transactionsBean1.setAssetTransactionAmount(40000);
+        transactionsBean1.setAssetTransactionStatus("unfinish");
+        transactionsBean1.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean1.setAssetTransactionFinishAt("");
+        transactionsBean1.setAssetTransactionPeriod(1);
+        transactionsBean1.setAssetTransactionRemark("");
+        transactionsBean1.setAssetTransactionDecreaseAmount(0);
+        transactionsBean1.setAssetTransactionRepaidAmount(26667);
+
+        transactions.add(transactionsBean1);
+
+        return transactions;
+    }
+
+    public static List<AssetTransactionsBean> get14DaysAssetTransactions(int overdue_days) {
+        getBeforeDate n = new getBeforeDate();
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 0);
+        String now_date = n.getBeforeDate(0);
+
+        List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();
+
+        AssetTransactionsBean transactionsBean1 = new AssetTransactionsBean();
+        transactionsBean1.setAssetTransactionType("repayprincipal");
+        transactionsBean1.setAssetTransactionAmount(200000);
+        transactionsBean1.setAssetTransactionStatus("unfinish");
+        transactionsBean1.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean1.setAssetTransactionFinishAt("");
+        transactionsBean1.setAssetTransactionPeriod(1);
+        transactionsBean1.setAssetTransactionRemark("");
+        transactionsBean1.setAssetTransactionDecreaseAmount(0);
+        transactionsBean1.setAssetTransactionRepaidAmount(26667);
+
+        AssetTransactionsBean transactionsBean2 = new AssetTransactionsBean();
+        transactionsBean2.setAssetTransactionType("repayinterest");
+        transactionsBean2.setAssetTransactionAmount(778);
+        transactionsBean2.setAssetTransactionStatus("unfinish");
+        transactionsBean2.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean2.setAssetTransactionFinishAt("");
+        transactionsBean2.setAssetTransactionPeriod(1);
+        transactionsBean2.setAssetTransactionRemark("");
+        transactionsBean2.setAssetTransactionDecreaseAmount(0);
+        transactionsBean2.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean3 = new AssetTransactionsBean();
+        transactionsBean3.setAssetTransactionType("repayservice");
+        transactionsBean3.setAssetTransactionAmount(2022);
+        transactionsBean3.setAssetTransactionStatus("unfinish");
+        transactionsBean3.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean3.setAssetTransactionFinishAt("");
+        transactionsBean3.setAssetTransactionPeriod(1);
+        transactionsBean3.setAssetTransactionRemark("");
+        transactionsBean3.setAssetTransactionDecreaseAmount(0);
+        transactionsBean3.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean4 = new AssetTransactionsBean();
+        transactionsBean4.setAssetTransactionType("repaylateinterest");
+        transactionsBean4.setAssetTransactionAmount(266);
+        transactionsBean4.setAssetTransactionStatus("unfinish");
+        transactionsBean4.setAssetTransactionExpectFinishTime(now_date + " 00:00:00");
+        transactionsBean4.setAssetTransactionFinishAt("");
+        transactionsBean4.setAssetTransactionPeriod(1);
+        transactionsBean4.setAssetTransactionRemark("");
+        transactionsBean4.setAssetTransactionDecreaseAmount(0);
+        transactionsBean4.setAssetTransactionRepaidAmount(0);
+
+        transactions.add(transactionsBean1);
+        transactions.add(transactionsBean2);
+        transactions.add(transactionsBean3);
+        transactions.add(transactionsBean4);
+
+        return transactions;
+    }
+
+    public static List<AssetTransactionsBean> get30DaysAssetTransactions(int overdue_days) {
+        getBeforeDate n = new getBeforeDate();
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 0);
+        String now_date = n.getBeforeDate(0);
+
+        List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();
+
+        AssetTransactionsBean transactionsBean1 = new AssetTransactionsBean();
+        transactionsBean1.setAssetTransactionType("repayprincipal");
+        transactionsBean1.setAssetTransactionAmount(200000);
+        transactionsBean1.setAssetTransactionStatus("unfinish");
+        transactionsBean1.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean1.setAssetTransactionFinishAt("");
+        transactionsBean1.setAssetTransactionPeriod(1);
+        transactionsBean1.setAssetTransactionRemark("");
+        transactionsBean1.setAssetTransactionDecreaseAmount(0);
+        transactionsBean1.setAssetTransactionRepaidAmount(26667);
+
+        AssetTransactionsBean transactionsBean2 = new AssetTransactionsBean();
+        transactionsBean2.setAssetTransactionType("repayinterest");
+        transactionsBean2.setAssetTransactionAmount(917);
+        transactionsBean2.setAssetTransactionStatus("unfinish");
+        transactionsBean2.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean2.setAssetTransactionFinishAt("");
+        transactionsBean2.setAssetTransactionPeriod(1);
+        transactionsBean2.setAssetTransactionRemark("");
+        transactionsBean2.setAssetTransactionDecreaseAmount(0);
+        transactionsBean2.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean3 = new AssetTransactionsBean();
+        transactionsBean3.setAssetTransactionType("repayservice");
+        transactionsBean3.setAssetTransactionAmount(5083);
+        transactionsBean3.setAssetTransactionStatus("unfinish");
+        transactionsBean3.setAssetTransactionExpectFinishTime(asset_transaction_expect_finish_time1 + " 00:00:00");
+        transactionsBean3.setAssetTransactionFinishAt("");
+        transactionsBean3.setAssetTransactionPeriod(1);
+        transactionsBean3.setAssetTransactionRemark("");
+        transactionsBean3.setAssetTransactionDecreaseAmount(0);
+        transactionsBean3.setAssetTransactionRepaidAmount(0);
+
+        AssetTransactionsBean transactionsBean4 = new AssetTransactionsBean();
+        transactionsBean4.setAssetTransactionType("repaylateinterest");
+        transactionsBean4.setAssetTransactionAmount(266);
+        transactionsBean4.setAssetTransactionStatus("unfinish");
+        transactionsBean4.setAssetTransactionExpectFinishTime(now_date + " 00:00:00");
+        transactionsBean4.setAssetTransactionFinishAt("");
+        transactionsBean4.setAssetTransactionPeriod(1);
+        transactionsBean4.setAssetTransactionRemark("");
+        transactionsBean4.setAssetTransactionDecreaseAmount(0);
+        transactionsBean4.setAssetTransactionRepaidAmount(0);
+
+        transactions.add(transactionsBean1);
+        transactions.add(transactionsBean2);
+        transactions.add(transactionsBean3);
+        transactions.add(transactionsBean4);
 
         return transactions;
     }

@@ -1,6 +1,8 @@
 package com.qa.bean.requestBean;
 
 import com.google.gson.annotations.SerializedName;
+import com.qa.common.IdCardGenerator;
+import com.qa.common.RandomValue;
 
 /**
  * Created by IntelliJ IDEA.
@@ -8,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  * Date: 18/11/26
  * Time: 下午7:57
  */
-public class BorrowerBean {
+public class IndividualBean {
     /**
      * individual_name : 李静
      * individual_idnum : 371322199012191765
@@ -73,29 +75,31 @@ public class BorrowerBean {
     @SerializedName("individual_email")
     private String individualEmail;
 
-    public static BorrowerBean getDefaultBorrowBean() {
-        BorrowerBean borrower = new BorrowerBean();
+    public static IndividualBean getIndividualBean() {
+        IndividualBean borrower = new IndividualBean();
+        RandomValue randomValue = new RandomValue();
+        IdCardGenerator g = new IdCardGenerator();
 
-        borrower.setIndividualName("李静");
-        borrower.setIndividualIdnum("371322199012191765");
-        borrower.setIndividualGender("f");
-        borrower.setIndividualResidence("山东省临沂市罗庄区罗庄办事处沈泉庄村B区2号楼1001室");
-        borrower.setIndividualWorkplace("山东省临沂市罗庄区韦姜屯康桥丽都宝莱饭店东临专业减肥店");
-        borrower.setIndividualPermanent("山东省临沂市罗庄区罗庄办事处");
-        borrower.setIndividualCompany("瘦典专业减肥店");
-        borrower.setIndividualTel("14768340456");
-        borrower.setIndividualWorkTel("0539-2411966");
-        borrower.setIndividualResidenceTel("15255535671");
-        borrower.setIndividualMateName("章伞");
-        borrower.setIndividualMateTel("18909201111");
-        borrower.setIndividualRelativeName("翟宝献");
-        borrower.setIndividualRelativeRelation("4");
-        borrower.setIndividualRelativeTel("13792999065");
-        borrower.setIndividualWorkmateName("李有为");
-        borrower.setIndividualWorkmateTel("18354440345");
-        borrower.setIndividualRemark("test1");
-        borrower.setIndividualNation("汉");
-        borrower.setIndividualEmail("14768340456@139.com");
+        borrower.setIndividualGender(randomValue.getSex());
+        borrower.setIndividualName(randomValue.getChineseName());
+        borrower.setIndividualIdnum(g.generate());
+        borrower.setIndividualResidence(randomValue.getRoad());
+        borrower.setIndividualWorkplace(randomValue.getRoad());
+        borrower.setIndividualPermanent(randomValue.getRoad());
+        borrower.setIndividualCompany(randomValue.getCompany());
+        borrower.setIndividualTel(randomValue.getTel());
+        borrower.setIndividualWorkTel(randomValue.getWorkTel());
+        borrower.setIndividualResidenceTel(randomValue.getTel());
+        borrower.setIndividualMateName(randomValue.getChineseName());
+        borrower.setIndividualMateTel(randomValue.getTel());
+        borrower.setIndividualRelativeName(randomValue.getChineseName());
+        borrower.setIndividualRelativeRelation(randomValue.getRelativeRelation());
+        borrower.setIndividualRelativeTel(randomValue.getTel());
+        borrower.setIndividualWorkmateName(randomValue.getChineseName());
+        borrower.setIndividualWorkmateTel(randomValue.getTel());
+        borrower.setIndividualRemark("test1xxxxxxx");
+        borrower.setIndividualNation(randomValue.getNation());
+        borrower.setIndividualEmail(randomValue.getEmail(6, 9));
 
         return borrower;
     }

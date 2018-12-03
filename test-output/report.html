@@ -51,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>2018-11-26 21:06:48</span>
+                    <span class='label suite-start-time blue darken-3'>2018-11-29 19:58:10</span>
 				</a>
 			</li>
 			<li>
@@ -127,7 +127,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -142,10 +142,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='7.692%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='5.882%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='92.308%'>24</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='94.118%'>16</span> others
 				</div>
 			</div>
 		</div>
@@ -162,23 +162,23 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>get_api-get类API-测试集合</span>
-						<span class='test-time'>2018-11-26 21:06:48</span>
+						<span class='test-name'>Fox_Post_api-post类API-测试集合</span>
+						<span class='test-time'>2018-11-29 19:58:11</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>2018-11-26 21:06:48</span>
-	<span class='label end-time'>2018-11-26 21:06:51</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+678ms</span>
+	<span class='label start-time'>2018-11-29 19:58:11</span>
+	<span class='label end-time'>2018-11-29 19:58:14</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+747ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
 				<li class='node level-1  pass' status='pass' test-id='2'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>Get类 接口</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-26 21:06:51</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+746ms</span>
+						<h5 class='node-name'>Fox_Post类 接口</h5>
+						<span class="node-time label grey lighten-1 white-text">2018-11-29 19:58:14</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+423ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -194,7 +194,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
+													<td class='timestamp'>7:58:14 PM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -205,10 +205,10 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'>testcase1</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-26 21:06:51</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 1s+627ms</span>
+						<span class="node-time label grey lighten-1 white-text">2018-11-29 19:58:14</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 2s+334ms</span>
 						<span class='test-status right pass'>pass</span>
-							<div class='node-desc'>呼叫中心通时通次月报。参数:timeKey=201810</div>
+							<div class='node-desc'>资产同步。</div>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -223,156 +223,87 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> --> GET http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> --> POST http://foxtest.fond.io/assetsync/assetsync/sync</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> --> END GET</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> Content-Type: application/json; charset=UTF-8</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- 200 http://foxtest.fond.io/bi/api/genesysCallReport/monthly?timeKey=201810 (139ms)</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> Content-Length: 10126</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Server: nginx</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Date: Mon, 26 Nov 2018 13:06:42 GMT</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Content-Type: application/json;charset=UTF-8</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Transfer-Encoding: chunked</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Connection: keep-alive</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Application-Context: bi</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
+													<td class='timestamp'>7:58:14 PM</td>
 													<td class='step-details'>RetrofitLog--></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> {"msg":"请求成功！","success":true}</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> {"code":"0","data":{"asset":{"asset_item_number":"20181543492692557","asset_from_system":"dsq","asset_from_system_name":"贷上钱","asset_type":"现金贷","asset_sub_type":"multiple","asset_name":"20181543492692557","asset_sign_at":"2018-05-19 23:55:45","asset_grant_at":"2018-05-19 23:55:45","asset_due_at":"2018-11-15 00:00:00","asset_interest_amount":8808,"asset_repaid_interest_amount":0,"asset_principal_amount":300000,"asset_repaid_principal_amount":0,"asset_penalty_amount":22000,"asset_repaid_penalty_amount":0,"asset_decrease_penalty_amount":0,"asset_fee_amount":45192,"asset_repaid_fee_amount":0,"asset_channel":"Paydayloan","asset_city_code":371300,"asset_status":"repay","asset_loan_channel":"hengfeng","asset_repaid_amount":0,"asset_period_type":"month","asset_period_count":6,"asset_period_days":0,"asset_ref_order_no":"","asset_ref_order_type":"game_combo","asset_risk_level":"7","asset_sub_order_type":"consumer","asset_product_name":"清风钱包","asset_actual_grant_at":"2018-05-19 23:57:45"},"borrower":{"individual_name":"敖伟伟","individual_idnum":"430981200911141407","individual_gender":"f","individual_residence":"渤海街53号-3-4","individual_workplace":"普集支路133号-18-10","individual_permanent":"晓望支街99号-14-9","individual_company":"邳州市交通局","individual_tel":"15305248705","individual_work_tel":"0440-5960521","individual_residence_tel":"15308856162","individual_mate_name":"洪伟","individual_mate_tel":"13004421975","individual_relative_name":"房伟伟","individual_relative_relation":"6","individual_relative_tel":"15901138760","individual_workmate_name":"栾伟","individual_workmate_tel":"18006760016","individual_remark":"test1xxxxxxx","individual_nation":"土家族","individual_email":"hnxdxqwh@live.com"},"repayer":{"individual_name":"敖伟伟","individual_idnum":"430981200911141407","individual_gender":"f","individual_residence":"渤海街53号-3-4","individual_workplace":"普集支路133号-18-10","individual_permanent":"晓望支街99号-14-9","individual_company":"邳州市交通局","individual_tel":"15305248705","individual_work_tel":"0440-5960521","individual_residence_tel":"15308856162","individual_mate_name":"洪伟","individual_mate_tel":"13004421975","individual_relative_name":"房伟伟","individual_relative_relation":"6","individual_relative_tel":"15901138760","individual_workmate_name":"栾伟","individual_workmate_tel":"18006760016","individual_remark":"test1xxxxxxx","individual_nation":"土家族","individual_email":"hnxdxqwh@live.com"},"asset_transactions":[{"asset_transaction_type":"repayprincipal","asset_transaction_amount":48968,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-06-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":1,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayinterest","asset_transaction_amount":2500,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-06-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":1,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayservice","asset_transaction_amount":7532,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-06-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":1,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayprincipal","asset_transaction_amount":49376,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-07-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":2,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayinterest","asset_transaction_amount":2092,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-07-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":2,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayservice","asset_transaction_amount":7532,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-07-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":2,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayprincipal","asset_transaction_amount":49788,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-08-17 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":3,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayinterest","asset_transaction_amount":1680,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-08-17 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":3,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayservice","asset_transaction_amount":7532,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-08-17 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":3,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayprincipal","asset_transaction_amount":50203,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-09-16 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":4,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayinterest","asset_transaction_amount":1265,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-09-16 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":4,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayservice","asset_transaction_amount":7532,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-09-16 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":4,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayprincipal","asset_transaction_amount":50621,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-10-16 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":5,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayinterest","asset_transaction_amount":847,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-10-16 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":5,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayservice","asset_transaction_amount":7532,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-10-16 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":5,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayprincipal","asset_transaction_amount":51044,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-11-15 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":6,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayinterest","asset_transaction_amount":424,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-11-15 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":6,"asset_transaction_remark":"在[2018-09-01 23:58:16]系统调用API做调整:还款日期调整为[2018-10-01 00:00:00]","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repayservice","asset_transaction_amount":7532,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-11-15 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":6,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0},{"asset_transaction_type":"repaylateinterest","asset_transaction_amount":22000,"asset_transaction_status":"unfinish","asset_transaction_expect_finish_time":"2018-06-18 00:00:00","asset_transaction_finish_at":"","asset_transaction_period":1,"asset_transaction_remark":"","asset_transaction_decrease_amount":0,"asset_transaction_repaid_amount":0}]}}</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- END HTTP (40-byte body)</td>
-												</tr>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>Passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='4'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>testcase2</h5>
-						<span class="node-time label grey lighten-1 white-text">2018-11-26 21:06:51</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+20ms</span>
-						<span class='test-status right pass'>pass</span>
-							<div class='node-desc'>呼叫中心通时通次日报。参数:timeKey=20181023</div>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> --> GET http://foxtest.fond.io/bi/api/genesysCallReport/daily?timeKey=20181023</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> --> END POST (10126-byte body)</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> --> END GET</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> <-- 200 OK http://foxtest.fond.io/assetsync/assetsync/sync (162ms)</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- 200 http://foxtest.fond.io/bi/api/genesysCallReport/daily?timeKey=20181023 (11ms)</td>
-												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
+													<td class='timestamp'>7:58:14 PM</td>
 													<td class='step-details'>RetrofitLog--> Server: nginx</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Date: Mon, 26 Nov 2018 13:06:43 GMT</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> Date: Thu, 29 Nov 2018 11:58:12 GMT</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Content-Type: application/json;charset=UTF-8</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> Content-Type: text/plain;charset=UTF-8</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> Transfer-Encoding: chunked</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> Content-Length: 25</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
+													<td class='timestamp'>7:58:14 PM</td>
 													<td class='step-details'>RetrofitLog--> Connection: keep-alive</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> X-Application-Context: bi</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> Accept-Charset: big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-compound_text, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
+													<td class='timestamp'>7:58:14 PM</td>
 													<td class='step-details'>RetrofitLog--></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> {"msg":"请求成功！","success":true}</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> {"code":0,"message":"ok"}</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
-													<td class='step-details'>RetrofitLog--> <-- END HTTP (40-byte body)</td>
+													<td class='timestamp'>7:58:14 PM</td>
+													<td class='step-details'>RetrofitLog--> <-- END HTTP (25-byte body)</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>9:06:51 PM</td>
+													<td class='timestamp'>7:58:14 PM</td>
 													<td class='step-details'>Passed</td>
 												</tr>
 										</tbody>
@@ -420,31 +351,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>26</div>
+					<div class='panel-lead'>17</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>2018-11-26 21:06:48</div>
+					<div class='panel-lead'>2018-11-29 19:58:10</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>2018-11-26 21:06:51</div>
+			 		<div class='panel-lead'>2018-11-29 19:58:14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 2s+901ms</div>
+					<div class='panel-lead'>0h 0m 4s+69ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -489,7 +420,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
+				passParent: 1,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -497,13 +428,13 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 2,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 24,
+				infoChild: 16,
 				exceptionsChild: 0,
 				
 				passGrandChild: 0,

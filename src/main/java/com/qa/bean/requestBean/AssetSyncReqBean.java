@@ -1,6 +1,7 @@
 package com.qa.bean.requestBean;
 
 import com.google.gson.annotations.SerializedName;
+import com.qa.common.RandomValue;
 
 import java.util.List;
 
@@ -22,14 +23,45 @@ public class AssetSyncReqBean {
     @SerializedName("data")
     private DataBean data;
 
-    public static AssetSyncReqBean getDefaultAssetSyncReqBean(int overdue_days) {
+    public static AssetSyncReqBean getAssetSyncReqBean(int overdue_days) {
         AssetSyncReqBean assetSyncReqBean = new AssetSyncReqBean();
         DataBean dataBean = new DataBean();
 
-        dataBean.setAsset(AssetBean.getDeault6MonthsAssetBean(overdue_days));
-        dataBean.setBorrower(BorrowerBean.getDefaultBorrowBean());
-        dataBean.setRepayer(RepayerBean.getDefaultRepayBean());
-        dataBean.setAssetTransactions(AssetTransactionsBean.getDefaultAssetTransactions(overdue_days));
+        RandomValue randomValue = new RandomValue();
+        String assetPeriodType = randomValue.getPeriodType();
+        int assetPeriodCount = randomValue.getPeriodCount();
+        int assetPeriodDays = randomValue.getPeriodDays();
+
+        if (assetPeriodType == "month") {
+            if (assetPeriodCount == 1) {
+                dataBean.setAsset(AssetBean.get1MonthAssetBean(overdue_days));
+                dataBean.setAssetTransactions(AssetTransactionsBean.get1MonthAssetTransactions(overdue_days));
+            }
+            if (assetPeriodCount == 3) {
+                dataBean.setAsset(AssetBean.get3MonthsAssetBean(overdue_days));
+                dataBean.setAssetTransactions(AssetTransactionsBean.get3MonthsAssetTransactions(overdue_days));
+            }
+            if (assetPeriodCount == 6) {
+                dataBean.setAsset(AssetBean.get6MonthsAssetBean(overdue_days));
+                dataBean.setAssetTransactions(AssetTransactionsBean.get6MonthsAssetTransactions(overdue_days));
+            }
+        } else {
+            if (assetPeriodDays == 7) {
+                dataBean.setAsset(AssetBean.get7DaysAssetBean(overdue_days));
+                dataBean.setAssetTransactions(AssetTransactionsBean.get7DaysAssetTransactions(overdue_days));
+            }
+            if (assetPeriodDays == 14) {
+                dataBean.setAsset(AssetBean.get14DaysAssetBean(overdue_days));
+                dataBean.setAssetTransactions(AssetTransactionsBean.get14DaysAssetTransactions(overdue_days));
+            }
+            if (assetPeriodDays == 30) {
+                dataBean.setAsset(AssetBean.get30DaysAssetBean(overdue_days));
+                dataBean.setAssetTransactions(AssetTransactionsBean.get30DaysAssetTransactions(overdue_days));
+            }
+        }
+
+        dataBean.setBorrower(IndividualBean.getIndividualBean());
+        dataBean.setRepayer(IndividualBean.getIndividualBean());
 
         assetSyncReqBean.setCode("0");
         assetSyncReqBean.setData(dataBean);
@@ -65,9 +97,9 @@ public class AssetSyncReqBean {
         @SerializedName("asset")
         private AssetBean asset;
         @SerializedName("borrower")
-        private BorrowerBean borrower;
+        private IndividualBean borrower;
         @SerializedName("repayer")
-        private RepayerBean repayer;
+        private IndividualBean repayer;
         @SerializedName("asset_transactions")
         private List<AssetTransactionsBean> assetTransactions;
 
@@ -79,20 +111,20 @@ public class AssetSyncReqBean {
             this.asset = asset;
         }
 
-        public BorrowerBean getBorrower() {
+        public IndividualBean getBorrower() {
             return borrower;
         }
 
-        public void setBorrower(BorrowerBean borrower) {
+        public void setBorrower(IndividualBean borrower) {
             this.borrower = borrower;
         }
 
-        public RepayerBean getRepayer() {
+        public IndividualBean getRepayer() {
             return repayer;
         }
 
-        public void setRepayer(RepayerBean repayer) {
-            this.repayer = repayer;
+        public void setRepayer(IndividualBean repayer) {
+            this.repayer = borrower;
         }
 
         public List<AssetTransactionsBean> getAssetTransactions() {

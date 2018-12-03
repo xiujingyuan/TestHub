@@ -15,9 +15,9 @@ public class getBeforeDate {
         // 获取今天的日期
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, -n);
-        String today = new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime());
+        String date = new SimpleDateFormat("yyyy-MM-dd").format(cal.getTime());
 
-        return today;
+        return date;
 //        Date date = new Date();
 //        int year, month, day;
 //        date.setDate(date.getDate() - n);
