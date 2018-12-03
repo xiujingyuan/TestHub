@@ -6,7 +6,7 @@
 
     <test name="nake data" preserve-order="true">
         <classes>
-            <class name="com.qa.common.DemoTest"/>
+            <class name="com.qa.common.MakeDataTest"/>
         </classes>
     </test>
 

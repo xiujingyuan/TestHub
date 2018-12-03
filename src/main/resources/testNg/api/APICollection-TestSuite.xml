@@ -5,7 +5,7 @@
     <parameter name="system.info" value="reporter.config.MySystemInfo"/>
 
     <suite-files>
-        <suite-file path="get/GetApi-TestSuite.xml"/>
+        <suite-file path="get/BiGetApi-TestSuite.xml"/>
         <suite-file path="post/FoxPostApi-TestSuite.xml"/>
         <suite-file path="post/DemoPostApi-TestSuite.xml"/>
     </suite-files>

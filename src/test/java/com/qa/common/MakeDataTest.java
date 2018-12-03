@@ -39,9 +39,9 @@ public class MakeDataTest {
     @Test
     public void make() throws IOException {
         RandomValue randomValue = new RandomValue();
-        int overdue_days = randomValue.getNum(1, 365);
 
         for (int i = 0; i < 1000; i++) {
+            int overdue_days = randomValue.getNum(1, 2000);
             implPost.postAssetSync(overdue_days);
         }
     }
