@@ -184,7 +184,6 @@ public class RandomValue {
         int index = getNum(0, periodTypeList.length - 1);
         assetPeriodType = periodTypeList[index];
 
-        System.out.println("assetPeriodType:" + assetPeriodType);
         return assetPeriodType;
     }
 
@@ -199,7 +198,6 @@ public class RandomValue {
             assetPeriodCount = 1;
         }
 
-        System.out.println("assetPeriodCount:" + assetPeriodCount);
         return assetPeriodCount;
     }
 
@@ -214,7 +212,6 @@ public class RandomValue {
             assetPeriodDays = Integer.parseInt(dayPeriodDays[index]);
         }
 
-        System.out.println("assetPeriodDays:" + assetPeriodDays);
         return assetPeriodDays;
     }
 }
