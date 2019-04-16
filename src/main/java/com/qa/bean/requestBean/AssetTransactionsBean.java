@@ -396,7 +396,7 @@ public class AssetTransactionsBean {
 
     public static List<AssetTransactionsBean> get7DaysAssetTransactions(int overdue_days) {
         getBeforeDate n = new getBeforeDate();
-        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 0);
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days);
 
         List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();
 
@@ -418,7 +418,7 @@ public class AssetTransactionsBean {
 
     public static List<AssetTransactionsBean> get14DaysAssetTransactions(int overdue_days) {
         getBeforeDate n = new getBeforeDate();
-        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days + 30 * 0);
+        String asset_transaction_expect_finish_time1 = n.getBeforeDate(overdue_days);
         String now_date = n.getBeforeDate(0);
 
         List<AssetTransactionsBean> transactions = new ArrayList<AssetTransactionsBean>();

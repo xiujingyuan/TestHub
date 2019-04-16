@@ -32,6 +32,7 @@ public class HttpPost extends HttpBase {
         return call.execute();
     }
 
+    //资产同步
     public Response<HttpResModel> postAssetSync(int overdue_days) throws IOException {
         AssetSyncReqBean assetSyncReqBean = AssetSyncReqBean.getAssetSyncReqBean(overdue_days);
         Call<HttpResModel> call = foxApi.postAssetSync(assetSyncReqBean);

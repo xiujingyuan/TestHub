@@ -4,7 +4,7 @@
     <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"/>
     <parameter name="system.info" value="reporter.config.MySystemInfo"/>
 
-    <test name="nake data" preserve-order="true">
+    <test name="make data" preserve-order="true">
         <classes>
             <class name="com.qa.common.MakeDataTest"/>
         </classes>

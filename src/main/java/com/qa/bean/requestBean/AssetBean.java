@@ -1,7 +1,6 @@
 package com.qa.bean.requestBean;
 
 import com.google.gson.annotations.SerializedName;
-import com.qa.common.RandomValue;
 import com.qa.common.getBeforeDate;
 
 import java.util.Date;
@@ -114,10 +113,11 @@ public class AssetBean {
     private String assetActualGrantAt;
     @SerializedName("asset_owner")
     private String assetOwner;
+    @SerializedName("asset_version")
+    private Long assetVersion;
 
     public static AssetBean get1MonthAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        RandomValue randomValue = new RandomValue();
         String asset_item_no = "combo_order2018" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
@@ -151,9 +151,9 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("hengfeng");
         asset.setAssetRepaidAmount(0);
-        asset.setAssetPeriodType(randomValue.getPeriodType());
-        asset.setAssetPeriodCount(randomValue.getPeriodCount());
-        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetPeriodType("month");
+        asset.setAssetPeriodCount(1);
+        asset.setAssetPeriodDays(0);
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("game_combo");
         asset.setAssetRiskLevel("7");
@@ -161,13 +161,13 @@ public class AssetBean {
         asset.setAssetProductName("清风钱包");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
         asset.setAssetOwner("KN");
+        asset.setAssetVersion(new Date().getTime());
 
         return asset;
     }
 
     public static AssetBean get3MonthsAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        RandomValue randomValue = new RandomValue();
         String asset_item_no = "combo_order2018" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
@@ -201,9 +201,9 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("hengfeng");
         asset.setAssetRepaidAmount(27333);
-        asset.setAssetPeriodType(randomValue.getPeriodType());
-        asset.setAssetPeriodCount(randomValue.getPeriodCount());
-        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetPeriodType("month");
+        asset.setAssetPeriodCount(3);
+        asset.setAssetPeriodDays(0);
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("game_combo");
         asset.setAssetRiskLevel("1");
@@ -211,13 +211,13 @@ public class AssetBean {
         asset.setAssetProductName("元宝钱包");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
         asset.setAssetOwner("KN");
+        asset.setAssetVersion(new Date().getTime());
 
         return asset;
     }
 
     public static AssetBean get6MonthsAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        RandomValue randomValue = new RandomValue();
         String asset_item_no = "2018" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
@@ -251,9 +251,9 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("hengfeng");
         asset.setAssetRepaidAmount(0);
-        asset.setAssetPeriodType(randomValue.getPeriodType());
-        asset.setAssetPeriodCount(randomValue.getPeriodCount());
-        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetPeriodType("month");
+        asset.setAssetPeriodCount(6);
+        asset.setAssetPeriodDays(0);
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("game_combo");
         asset.setAssetRiskLevel("7");
@@ -261,14 +261,14 @@ public class AssetBean {
         asset.setAssetProductName("清风钱包");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
         asset.setAssetOwner("KN");
+        asset.setAssetVersion(new Date().getTime());
 
         return asset;
     }
 
     public static AssetBean get7DaysAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        RandomValue randomValue = new RandomValue();
-        String asset_item_no = "M2018" + (new Date().getTime());
+        String asset_item_no = "72019" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
 
@@ -301,9 +301,9 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("noloan");
         asset.setAssetRepaidAmount(0);
-        asset.setAssetPeriodType(randomValue.getPeriodType());
-        asset.setAssetPeriodCount(randomValue.getPeriodCount());
-        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetPeriodType("day");
+        asset.setAssetPeriodCount(1);
+        asset.setAssetPeriodDays(7);
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("stb_bill_split");
         asset.setAssetRiskLevel("7");
@@ -311,13 +311,13 @@ public class AssetBean {
         asset.setAssetProductName("你来借");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
         asset.setAssetOwner("STB_NILAIJIE");
+        asset.setAssetVersion(new Date().getTime());
 
         return asset;
     }
 
     public static AssetBean get14DaysAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        RandomValue randomValue = new RandomValue();
         String asset_item_no = "2018" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
@@ -351,9 +351,9 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("hengfeng");
         asset.setAssetRepaidAmount(0);
-        asset.setAssetPeriodType(randomValue.getPeriodType());
-        asset.setAssetPeriodCount(randomValue.getPeriodCount());
-        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetPeriodType("day");
+        asset.setAssetPeriodCount(1);
+        asset.setAssetPeriodDays(14);
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("game_bill");
         asset.setAssetRiskLevel("8");
@@ -361,14 +361,16 @@ public class AssetBean {
         asset.setAssetProductName("蜜蜂借款");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
         asset.setAssetOwner("KN");
+        asset.setAssetVersion(new Date().getTime());
 
         return asset;
     }
 
     public static AssetBean get30DaysAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        RandomValue randomValue = new RandomValue();
-        String asset_item_no = "M2018" + (new Date().getTime());
+//        String asset_item_no = "newlost0225" + (new Date().getTime());
+//        String asset_item_no = "30newok0225" + (new Date().getTime());
+        String asset_item_no = "old0228" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
 
@@ -401,9 +403,9 @@ public class AssetBean {
         asset.setAssetStatus("repay");
         asset.setAssetLoanChannel("manaowan");
         asset.setAssetRepaidAmount(0);
-        asset.setAssetPeriodType(randomValue.getPeriodType());
-        asset.setAssetPeriodCount(randomValue.getPeriodCount());
-        asset.setAssetPeriodDays(randomValue.getPeriodDays());
+        asset.setAssetPeriodType("day");
+        asset.setAssetPeriodCount(1);
+        asset.setAssetPeriodDays(30);
         asset.setAssetRefOrderNo("");
         asset.setAssetRefOrderType("game_bill");
         asset.setAssetRiskLevel("99");
@@ -411,6 +413,7 @@ public class AssetBean {
         asset.setAssetProductName("清风钱包");
         asset.setAssetActualGrantAt(asset_actual_grant_at + " 23:57:45");
         asset.setAssetOwner("KN");
+        asset.setAssetVersion(new Date().getTime());
 
         return asset;
     }
@@ -675,7 +678,15 @@ public class AssetBean {
         return assetOwner;
     }
 
-    public void setAssetOwner(String assetOwner) {
+    public void setAssetOwner(String assetVerison) {
         this.assetOwner = assetOwner;
+    }
+
+    public Long getAssetVersion() {
+        return assetVersion;
+    }
+
+    public void setAssetVersion(Long assetVersion) {
+        this.assetVersion = assetVersion;
     }
 }

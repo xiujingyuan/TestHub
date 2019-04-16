@@ -1,7 +1,6 @@
 package com.qa.bean.requestBean;
 
 import com.google.gson.annotations.SerializedName;
-import com.qa.common.RandomValue;
 
 import java.util.List;
 
@@ -27,10 +26,15 @@ public class AssetSyncReqBean {
         AssetSyncReqBean assetSyncReqBean = new AssetSyncReqBean();
         DataBean dataBean = new DataBean();
 
-        RandomValue randomValue = new RandomValue();
-        String assetPeriodType = randomValue.getPeriodType();
-        int assetPeriodCount = randomValue.getPeriodCount();
-        int assetPeriodDays = randomValue.getPeriodDays();
+//        RandomValue randomValue = new RandomValue();
+//        String assetPeriodType = randomValue.getPeriodType();
+//        int assetPeriodCount = randomValue.getPeriodCount();
+//        int assetPeriodDays = randomValue.getPeriodDays();
+
+        String assetPeriodType = "day";
+        int assetPeriodCount = 1;
+//        int assetPeriodDays = 7;
+        int assetPeriodDays = 30;
 
         if (assetPeriodType == "month") {
             if (assetPeriodCount == 1) {

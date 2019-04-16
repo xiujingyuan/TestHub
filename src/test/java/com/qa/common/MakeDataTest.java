@@ -38,10 +38,11 @@ public class MakeDataTest {
      */
     @Test
     public void make() throws IOException {
-        RandomValue randomValue = new RandomValue();
 
-        for (int i = 0; i < 1000; i++) {
-            int overdue_days = randomValue.getNum(1, 2000);
+        for (int i = 0; i < 10; i++) {
+//            RandomValue randomValue = new RandomValue();
+//            int overdue_days = randomValue.getNum(1, 2000);
+            int overdue_days =1;
             implPost.postAssetSync(overdue_days);
         }
     }
