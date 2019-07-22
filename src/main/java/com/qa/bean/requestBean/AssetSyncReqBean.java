@@ -22,7 +22,8 @@ public class AssetSyncReqBean {
     @SerializedName("data")
     private DataBean data;
 
-    public static AssetSyncReqBean getAssetSyncReqBean(int overdue_days) {
+    public static AssetSyncReqBean getAssetSyncReqBean(int overdue_days, String assetPeriodType, int assetPeriodCount,
+                                                       int assetPeriodDays) {
         AssetSyncReqBean assetSyncReqBean = new AssetSyncReqBean();
         DataBean dataBean = new DataBean();
 
@@ -30,11 +31,6 @@ public class AssetSyncReqBean {
 //        String assetPeriodType = randomValue.getPeriodType();
 //        int assetPeriodCount = randomValue.getPeriodCount();
 //        int assetPeriodDays = randomValue.getPeriodDays();
-
-        String assetPeriodType = "day";
-        int assetPeriodCount = 1;
-//        int assetPeriodDays = 7;
-        int assetPeriodDays = 30;
 
         if (assetPeriodType == "month") {
             if (assetPeriodCount == 1) {

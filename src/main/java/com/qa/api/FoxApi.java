@@ -49,8 +49,7 @@ public interface FoxApi {
      * @param assetSyncReqBean
      * @return
      */
-    @POST("assetsync/assetsync/sync")
+    @POST("asset/sync")
     Call<HttpResModel> postAssetSync(@Body AssetSyncReqBean assetSyncReqBean);
-
 
 }

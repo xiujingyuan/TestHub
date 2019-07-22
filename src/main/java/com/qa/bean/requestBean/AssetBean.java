@@ -118,7 +118,7 @@ public class AssetBean {
 
     public static AssetBean get1MonthAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-        String asset_item_no = "combo_order2018" + (new Date().getTime());
+        String asset_item_no = "combo_order2019" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
 
@@ -149,7 +149,7 @@ public class AssetBean {
         asset.setAssetChannel("Paydayloan");
         asset.setAssetCityCode(370400);
         asset.setAssetStatus("repay");
-        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetLoanChannel("noloan");
         asset.setAssetRepaidAmount(0);
         asset.setAssetPeriodType("month");
         asset.setAssetPeriodCount(1);
@@ -199,7 +199,7 @@ public class AssetBean {
         asset.setAssetChannel("Paydayloan");
         asset.setAssetCityCode(371200);
         asset.setAssetStatus("repay");
-        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetLoanChannel("noloan");
         asset.setAssetRepaidAmount(27333);
         asset.setAssetPeriodType("month");
         asset.setAssetPeriodCount(3);
@@ -249,7 +249,7 @@ public class AssetBean {
         asset.setAssetChannel("Paydayloan");
         asset.setAssetCityCode(371300);
         asset.setAssetStatus("repay");
-        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetLoanChannel("noloan");
         asset.setAssetRepaidAmount(0);
         asset.setAssetPeriodType("month");
         asset.setAssetPeriodCount(6);
@@ -349,7 +349,7 @@ public class AssetBean {
         asset.setAssetChannel("Paydayloan");
         asset.setAssetCityCode(320900);
         asset.setAssetStatus("repay");
-        asset.setAssetLoanChannel("hengfeng");
+        asset.setAssetLoanChannel("noloan");
         asset.setAssetRepaidAmount(0);
         asset.setAssetPeriodType("day");
         asset.setAssetPeriodCount(1);
@@ -368,9 +368,7 @@ public class AssetBean {
 
     public static AssetBean get30DaysAssetBean(int overdue_days) {
         AssetBean asset = new AssetBean();
-//        String asset_item_no = "newlost0225" + (new Date().getTime());
-//        String asset_item_no = "30newok0225" + (new Date().getTime());
-        String asset_item_no = "old0228" + (new Date().getTime());
+        String asset_item_no = "user_level_" + (new Date().getTime());
 
         getBeforeDate n = new getBeforeDate();
 
@@ -401,7 +399,7 @@ public class AssetBean {
         asset.setAssetChannel("Paydayloan");
         asset.setAssetCityCode(441800);
         asset.setAssetStatus("repay");
-        asset.setAssetLoanChannel("manaowan");
+        asset.setAssetLoanChannel("noloan");
         asset.setAssetRepaidAmount(0);
         asset.setAssetPeriodType("day");
         asset.setAssetPeriodCount(1);

@@ -44,8 +44,12 @@ public class AssetSyncTest extends TestBase {
     @Test(description = "资产同步。")
     public void testcase1() throws IOException {
         int overdue_days = Integer.parseInt(properties.getProperty("testcase1.req.overdue_days"));
+        String assetPeriodType = properties.getProperty("testcase1.req.assetPeriodType");
+        int assetPeriodCount = Integer.parseInt(properties.getProperty("testcase1.req.assetPeriodCount"));
+        int assetPeriodDays = Integer.parseInt(properties.getProperty("testcase1.req.assetPeriodDays"));
 
-        Response<HttpResModel> response = implPost.postAssetSync(overdue_days);
+        Response<HttpResModel> response = implPost.postAssetSync(overdue_days, assetPeriodType, assetPeriodCount,
+                assetPeriodDays);
         HttpResModel body = response.body();
         Assert.assertNotNull(body, "response.body()");
 //        将需要验证的response 与 JsonSchema标准对象 进行比较

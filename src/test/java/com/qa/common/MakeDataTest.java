@@ -1,11 +1,14 @@
 package com.qa.common;
 
 import com.qa.post.HttpPost;
+import com.qa.util.DateUtils;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -39,11 +42,30 @@ public class MakeDataTest {
     @Test
     public void make() throws IOException {
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 16; i++) {
 //            RandomValue randomValue = new RandomValue();
 //            int overdue_days = randomValue.getNum(1, 2000);
-            int overdue_days =1;
-            implPost.postAssetSync(overdue_days);
+            int overdue_days = 1;
+            String assetPeriodType = "day";
+            int assetPeriodCount = 1;
+            int assetPeriodDays = 30;
+            implPost.postAssetSync(overdue_days, assetPeriodType, assetPeriodCount, assetPeriodDays);
         }
     }
+
+    @Test
+    public void test() {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.HOUR_OF_DAY, 6);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+
+        Date date = new Date();
+        String endTime = String.valueOf(date.getTime() / 1000);
+        Date startDate = DateUtils.getBeforeTime(-3, date);
+        String startDateStr = String.valueOf(startDate.getTime() / 1000);
+        System.out.println(startDateStr);
+        System.out.println(endTime);
+    }
+
 }
